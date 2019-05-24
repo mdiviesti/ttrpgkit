@@ -1,2 +1,3 @@
-# ttrpgkit
-A toolkit for world building geared toward Game Masters of Table Top Role Playing Games. 
+#TTRPGKIT
+
+A Resource and toolkit for Game Masters 
