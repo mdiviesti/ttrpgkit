@@ -1,0 +1,35 @@
+{
+  "name": "ttrpgkit",
+  "version": "1.0.0",
+  "description": "A toolkit for Game Masters.",
+  "main": "index.html",
+  "dependencies": {
+    "foundation-sites": "^6.5.3",
+    "jquery": "^3.4.1",
+    "what-input": "^5.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdiviesti/ttrpgkit.git"
+  },
+  "keywords": [
+    "Role",
+    "Playing",
+    "Game",
+    "Fanstasy",
+    "RPG",
+    "TTRPG",
+    "Table",
+    "Top"
+  ],
+  "author": "Michael Diviesti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdiviesti/ttrpgkit/issues"
+  },
+  "homepage": "https://github.com/mdiviesti/ttrpgkit#readme"
+}
