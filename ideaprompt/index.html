@@ -1,24 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Randomly Roll some ideas</title>
     <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
     <script src="site.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css" />
 </head>
 <body>
-<p>
-    This is just a random icon generator. It uses FontAwesome icons and randomly pulls 10 of the icons within their
-    "free" tier. The idea from this came from the video <a href="https://youtu.be/9GBPTec5TZA?t=1738">Easy Ways to be
-    your own GM (solo RPGing)</a> where Youtube user "Geek Gamers"
-    suggested using a set of dice with pictures on them to help suggest ideas. I figured, we could do some fun stuff
-    like this but using a source that had more icons than what is limited to dice. Refreshing the browser will
-    randomly generate more icons.
-</p>
-<p>If your world is low tech but you keep getting icons for modern items, think about what the low tech version of
-    those would be. A motorcycle could easily be a horse instead.</p>
-<script type="text/javascript">
-writeIcons();
+<div class="grid-container">
+    <div class="callout">
+        This is just a random icon generator. It uses FontAwesome icons and randomly pulls 10 of the icons within their
+        "free" tier. The idea from this came from the video <a href="https://youtu.be/9GBPTec5TZA?t=1738">Easy Ways to be
+        your own GM (solo RPGing)</a> where Youtube user "Geek Gamers"
+        suggested using a set of dice with pictures on them to help suggest ideas. I figured, we could do some fun stuff
+        like this but using a source that had more icons than what is limited to dice. Refreshing the browser will
+        randomly generate more icons.
+    </div>
+    <div class="callout">If your world is low tech but you keep getting icons for modern items, think about what the low tech
+        version of
+        those would be. A motorcycle could easily be a horse instead.</div>
+    <div class="callout primary">
+    <script type="text/javascript">
+        writeIcons();
+    </script>
+    </div>
+</div>
+<script src="/node_modules/jquery/dist/jquery.js"></script>
+<script src="/node_modules/what-input/dist/what-input.js"></script>
+<script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
+<script>
+    $(document).foundation();
 </script>
+
 </body>
 </html>
