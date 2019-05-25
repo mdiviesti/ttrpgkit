@@ -458,7 +458,7 @@ var dreams = [{
     {"name": "Sun", "meaning": "To dream of the sun is always lucky and portends a happy future."},
     {"name": "Supper", "meaning": "To sit at supper means the news of a birth in the family."},
     {"name": "Swan", "meaning": "Means that it will be long before you reach your desires."},
-    {"name": "Swastika", "meaning": "Is a sign of good luck. "},
+    {"name": "Horseshoe", "meaning": "Is a sign of good luck. "},
     {"name": "Swimming", "meaning": "Is a sign of sure enjoyment."}, {
         "name": "Sword",
         "meaning": "To dream of wearing one is a sign of honor; to be wounded with one is a sign of misfortune."
