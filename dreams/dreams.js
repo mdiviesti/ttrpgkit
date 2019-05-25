@@ -541,10 +541,340 @@ var dreams = [{
     {
         "name": "Zephyr",
         "meaning": "To embroider or crochet with zephyr or wool denotes a meeting with a person who will love you."
+    }, {"name": "ABROAD", "meaning": "(Dreamer going or gone) An early journey."},
+    {"name": "ACCIDENT", "meaning": "(being the victim of one) Business deal impending requires great caution."},
+    {"name": "ACCIDENT", "meaning": "(to a friend or relative) A letter from him or her conveying good news."}, {
+        "name": "ANCHOR",
+        "meaning": "A voyage across the sea: (in water) a disappointment: (if a girl dreams) a sailor will fall in love with her."
+    }, {"name": "ANGER", "meaning": "To dream of being angry with anyone means that that person is a true friend."}, {
+        "name": "ANIMALS",
+        "meaning": "As a rule, luck; (domestic animals) speedy return of absent friends, family reconciliation: (wild animals) secret enemies."
+    }, {"name": "APPLES", "meaning": "Long life: (to a woman) many years and many children."},
+    {"name": "ARROW", "meaning": "A letter has been written which will cause regret."},
+    {"name": "AXE", "meaning": "A way will present itself soon to attain a much desired end."}, {
+        "name": "BALL",
+        "meaning": "(Game) Money coming soon. (Rolling ball) an unexpected gift of money which will be soon spent."
+    }, {"name": "BALLROOM", "meaning": "(Dancing with a dear friend) Marriage to him or her."},
+    {"name": "BANANAS", "meaning": "A piece of good luck coming."},
+    {"name": "BAND", "meaning": "(Musical) A lucky speculation or business deal."},
+    {"name": "BAREFOOT", "meaning": "A successful speculation or bargain."},
+    {"name": "BARREL", "meaning": "(Full) Money coming quickly."},
+    {"name": "BATH", "meaning": "Health and long life: (if dreamer is a young girl) early marriage to present lover."},
+    {"name": "BATTLE", "meaning": "(By girl) Will shortly fall in love; (by a soldier) promotion."}, {
+        "name": "BEAR",
+        "meaning": "(Chasing the dreamer) Victory of an enemy: (bear running from dreamer) victory over an enemy."
+    }, {"name": "BEES", "meaning": "Steady pursuit of object in view will bring success."},
+    {"name": "BEGGARS", "meaning": "To dream of beggars is a fortunate sign to lovers and business people."}, {
+        "name": "BLIND",
+        "meaning": "To dream of being blind is a very lucky sign; to see a blind person is a warning of danger."
+    }, {"name": "BLOOD", "meaning": "To see blood means great riches, an inheritance."},
+    {"name": "BOAT", "meaning": "The arrival of a dear friend."},
+    {"name": "BOUQUET", "meaning": "To receive one means much pleasure; to give one, constancy of a lover or friend."},
+    {"name": "BRACELET", "meaning": "Good luck and fortune coming."},
+    {"name": "BROTHER", "meaning": "Seeing dead brothers or sisters in a dream is a sign of long life."},
+    {"name": "BULLDOG", "meaning": "A good omen in love or business."}, {
+        "name": "BURIAL",
+        "meaning": "To dream of being buried means that wealth is coming— as much wealth as earth laid over you."
+    }, {"name": "BURNING", "meaning": "(Houses, etc.) Riches and prosperity."},
+    {"name": "BUYING", "meaning": "Happiness and contentment, a legacy."},
+    {"name": "CAGE", "meaning": "(Birds in) Early fortunate marriage; (empty) friends or lovers will go away."},
+    {"name": "CAKES", "meaning": "To dream of any kind of cakes is a good omen."},
+    {"name": "CANARY", "meaning": "(Singing) Marriage and a charming house."},
+    {"name": "CARDS", "meaning": "(Playing at) Speedy marriage."},
+    {"name": "CATHEDRAL", "meaning": "Prosperity and fortune."},
+    {"name": "CEMETERY", "meaning": "An omen of prosperity."},
+    {"name": "CHAIR", "meaning": "An increase in the family."},
+    {"name": "CHERRIES", "meaning": "Good news, pleasure and enjoyment."},
+    {"name": "CHILDREN", "meaning": "Lucky omen: increase in wealth."},
+    {"name": "CHIMNEY", "meaning": "Good luck, the higher the better."},
+    {"name": "CHRISTENING", "meaning": "Good fortune approaching."},
+    {"name": "COCK CROWING", "meaning": "Great prosperity."},
+    {"name": "COINS", "meaning": "(Copper) Good fortune; (silver) worry; (gold) commercial troubles."},
+    {"name": "COLD", "meaning": "Friends will be kind to you."},
+    {"name": "CORNFIELD", "meaning": "Health, wealth and pleasant times."},
+    {"name": "COWS", "meaning": "Prosperity, the more the better."},
+    {"name": "DAFFODILS", "meaning": "Pleasure and amusement in abundance."},
+    {"name": "DAGGER", "meaning": "A friend will confer a favor."},
+    {"name": "DEAD", "meaning": "To dream of oneself as dead is a good and auspicious sign of long life and success."},
+    {"name": "DEATH OF A FRIEND", "meaning": "Arrival of good news."},
+    {"name": "DIGGING", "meaning": "Good luck with perseverance."},
+    {"name": "DOCKS", "meaning": "Good news from abroad."}, {
+        "name": "DOG",
+        "meaning": "As a rule, a favorable sign; (Dog barking) somebody is trying to do you an ill turn; (Dogs fighting) serious quarrel between two friends of the dreamer."
+    }, {"name": "DONKEY", "meaning": "Lucky omen, usually a legacy."},
+    {"name": "DOVES", "meaning": "Success, especially to lovers. To the married, they denote a pleasure in store."},
+    {"name": "DROWNING", "meaning": "(Either the dreamer or another person.) Success, joy, prosperity."},
+    {"name": "DUCKS", "meaning": "Increased prosperity and happiness."},
+    {"name": "EAGLE", "meaning": "Success in a new place."},
+    {"name": "EARS", "meaning": "A pleasant letter from a friend."},
+    {"name": "EATING", "meaning": "(Dreamer eating) ill luck; (seeing others eat) good luck."},
+    {"name": "ECHO", "meaning": "Sickness either of dreamer or relations."},
+    {"name": "EGGS", "meaning": "Good luck, money, success; (eggs broken) failure and loss."},
+    {"name": "ELM TREE", "meaning": "A good turn offered by a male relative."},
+    {"name": "ELOPEMENT", "meaning": "Sign of a speedy marriage."},
+    {"name": "EMERALD", "meaning": "A sign of good luck and happiness."},
+    {"name": "EMPTINESS", "meaning": "Always a bad sign in a dream."}, {
+        "name": "ENGAGEMENT",
+        "meaning": "(To dream of being engaged to a handsome person) Great pleasure in store; (to a plain person) worry and trouble."
+    }, {
+        "name": "EYES",
+        "meaning": "In general a sign of good luck, and the prettier the eyes the better. To dream of someone with a defect of the eyes signifies minor misfortunes."
+    }, {
+        "name": "FACES",
+        "meaning": "(Smiling) Happy times with friends; (pale and gloomy) trouble and poverty; (changing faces) a removal; (washing own face) repentance for sin; (own face in glass) long-cherished secret plan will fail."
+    }, {"name": "FAIRY", "meaning": "All dreams of fairies are good omens—success and riches."},
+    {"name": "FALLING", "meaning": "Indicates some misfortune."},
+    {"name": "FAN", "meaning": "Quarrels, a rival in love."},
+    {"name": "FARMYARD", "meaning": "Good fortune coming; comfort and happiness."},
+    {"name": "FEATHERS", "meaning": "(White) Success and riches; (black) loss and failure."},
+    {"name": "FENCE", "meaning": "(Climbing) A sudden rise in life."}, {
+        "name": "FIELDS",
+        "meaning": "(Green) Prosperity, a happy marriage, handsome children; (clover, barley, wheat, etc.) great prosperity and happiness."
+    }, {
+        "name": "FIGS",
+        "meaning": "A good dream, joy and pleasure; (if a woman dreams) happy marriage and many children."
+    }, {"name": "FLEET", "meaning": "(At sea) Realization of cherished hopes."},
+    {"name": "FLOATING", "meaning": "To dream of floating on water is a good and lucky sign."},
+    {"name": "FLOODS", "meaning": "Success after triumphing over difficulties."},
+    {"name": "FLOUR", "meaning": "Death of a relative bringing a legacy."},
+    {"name": "FLOWERS", "meaning": "Prosperity."},
+    {"name": "FLY", "meaning": "(Swarm of flies) Rivals and jealous persons are spreading scandal."}, {
+        "name": "FLYING",
+        "meaning": "(Without wings) Success in love and business; (if ended by a fall) failure in attaining object; (with wings) bad omen—frustrated ambition."
+    }, {"name": "FOG", "meaning": "Bad dream—business losses."},
+    {"name": "FOREIGN", "meaning": "(Country) Success and prosperity at home."},
+    {"name": "FOREST", "meaning": "Trouble and losses through rivals."},
+    {"name": "FORK", "meaning": "A warning of imminent danger."},
+    {"name": "FOUNTAIN", "meaning": "(Playing) Good luck, happy times and laughter."},
+    {"name": "FOX", "meaning": "Trouble through secret enemy; (killing one) good luck."}, {
+        "name": "FRIENDS",
+        "meaning": "(Absence of) Speedy return; (death of) good news; (illness) bad news; (in good health) their prosperity."
+    }, {"name": "FROGS", "meaning": "Beware of flatterers and pessimists."},
+    {"name": "FROST", "meaning": "Success through aid of friends."}, {
+        "name": "FRUIT",
+        "meaning": "Usually a good dream, according to kind of fruit; (dreamer eating or throwing away fruit) bad sign."
+    }, {"name": "FUNERAL", "meaning": "A legacy or a rich marriage."},
+    {"name": "GAS", "meaning": "Minor discomforts and annoyances."},
+    {"name": "GATE", "meaning": "An obstacle to success will suddenly disappear."}, {
+        "name": "GEESE",
+        "meaning": "Happiness, success; (to hear geese cackling) a profitable business deal will be quickly concluded."
+    }, {"name": "GEMS", "meaning": "Usually an unfortunate omen."},
+    {"name": "GHOSTS", "meaning": "To dream of ghosts is invariably the presage of misfortune."},
+    {"name": "GIANT", "meaning": "Good fortune, success in business or love."},
+    {"name": "GIFTS", "meaning": "(Receiving) Good fortune coming."},
+    {"name": "GYPSIES", "meaning": "A profitless voyage to many strange countries."}, {
+        "name": "GLASS",
+        "meaning": "To dream of anything made of glass refers to women; (receiving glass of water) birth in the family."
+    }, {
+        "name": "GLOVES",
+        "meaning": "Usually bad luck; (gloves on hands) honor and safety; (losing gloves) loss in business."
+    }, {
+        "name": "GOAT",
+        "meaning": "Bad luck, some misfortune, especially unlucky to sailors; (white goat) a profitable venture; (many goats) an inheritance."
+    }, {"name": "GOD", "meaning": "A good dream—health and happiness."}, {
+        "name": "GOLD",
+        "meaning": "Omen of loss and bad luck: (dreamer finding gold) a sign that he will be robbed; (dreamer paying out gold) a sign that he will increase the number of his friends."
+    }, {"name": "GOOSEBERRIES", "meaning": "Time and trouble spent only for the benefit of others."}, {
+        "name": "HAIR",
+        "meaning": "Riches and fine clothes; (hair falling over face) a coming event will cause displeasure; (having hair cut) losses in business; (becoming bald) great danger."
+    }, {"name": "HAMMER", "meaning": "Triumph over difficulties."},
+    {"name": "HAMMOCK", "meaning": "Loss of something that is prized."},
+    {"name": "HAPPINESS", "meaning": "A presage of doubt and difficulty."},
+    {"name": "HARE", "meaning": "(Alive) Friendship: (dead) good luck: (hare running) a lengthy journey."},
+    {"name": "HARVEST", "meaning": "Hopes will not come to fruition."},
+    {"name": "HAT", "meaning": "(New) A small success: (blown off or damaged) losses."},
+    {"name": "HATCHET", "meaning": "A solution near to existing difficulties."},
+    {"name": "HAWK", "meaning": "A happy omen—success in life."},
+    {"name": "HAY", "meaning": "Good luck: (dreamer cutting hay) troubles and sorrow."},
+    {"name": "HAZEL NUT", "meaning": "(Eating) Troubles and discord."},
+    {"name": "HEAD", "meaning": "Good omen—health and money."},
+    {"name": "HORSESHOE", "meaning": "(Seeing one) A journey: (finding one) great good lock."},
+    {"name": "HOSPITAL", "meaning": "Misery, poverty, wounds."},
+    {"name": "HOUSE", "meaning": "Good luck: (dreamer building house) unlucky dream, signifying loss and sickness."},
+    {"name": "HUNCHBACK", "meaning": "A troubled life, with many ups and downs."}, {
+        "name": "HUNGER",
+        "meaning": "To dream of being hungry is a fortunate omen, foretelling that the dreamer, by industry and enterprise, will grow rich."
+    }, {
+        "name": "HUNTING",
+        "meaning": "(Dreamer returning from a hunt) A fortunate dream: (dreamer going hunting) frustrated hopes and disappointment."
+    }, {
+        "name": "HUSBAND",
+        "meaning": "For a woman to dream of her husband is not a very favorable dream, usually foretelling discord and deceit: for an unmarried girl to dream that she has a husband is a very bad omen."
+    }, {
+        "name": "HYMNS",
+        "meaning": "Singing hymns in a dream foretells sickness to the dreamer: (hearing hymns sung) consolation in troubles."
+    }, {
+        "name": "IRON",
+        "meaning": "A profitable bargain: (red-hot) sorrows: (burnt with same) dreamer will receive some personal injury."
+    }, {"name": "ISLAND", "meaning": "For a woman to dream of an island forebodes desertion by husband or lover."},
+    {"name": "ITCH", "meaning": "A sign of good luck."}, {
+        "name": "IVORY",
+        "meaning": "To dream of anything made of ivory is a sign that the dreamer will suffer from fraud and deception."
+    }, {"name": "IVY", "meaning": "True friends will present themselves."}, {
+        "name": "JEWELS",
+        "meaning": "To dream of jewelry of any kind is always a bad sign; love troubles or business dangers."
+    }, {"name": "JOCKEY", "meaning": "(On horseback) A successful speculation or bet."}, {
+        "name": "JOLLITY",
+        "meaning": "To dream of jollity and fun by night is good for those about to marry: to the poor a sign of good: to the rich a sign of trouble and loss."
+    }, {"name": "JOURNEY", "meaning": "(Making one) Peace and contentment at home."},
+    {"name": "JUDGE", "meaning": "A bad dream: beware of slander and malice."},
+    {"name": "JUG", "meaning": "(Drinking from one) Robust health and wholesome pleasures."}, {
+        "name": "JUMP",
+        "meaning": "To dream of jumping is unpropitious, foretelling obstacles that prevent fulfillment of a desire."
+    }, {"name": "KANGAROO", "meaning": "A secret and powerful enemy or rival."},
+    {"name": "KENNEL", "meaning": "An invitation to visit a male friend."},
+    {"name": "KETTLE", "meaning": "(Black) An ill omen, death: (copper) lucky dream."}, {
+        "name": "KEY",
+        "meaning": "Receipt of money: (for young people) a good and handsome partner in life: (holding a key) settlement of business perplexities: (lost key) anger, worry, want."
+    }, {
+        "name": "KILL",
+        "meaning": "(Dreamer killing a man) Assured happiness: (dreamer being killed) loss to the dream-adversary."
+    }, {"name": "KING", "meaning": "(Seeing oneself as a King) Warning to beware of flatterers and of self-conceit."}, {
+        "name": "KISS",
+        "meaning": "Beware of treachery and deceit: (kissing hand of somebody) friendship and good fortune: (kissing a stranger's hand) a journey."
+    }, {"name": "KITCHEN", "meaning": "Success, advancement in life."},
+    {"name": "LAMP", "meaning": "(Lit) Trouble, not serious."},
+    {"name": "LANTERN", "meaning": "Success: (to see light extinguished or darkened) sadness, sickness, poverty."},
+    {"name": "LARK", "meaning": "Good luck: improvement in finances."},
+    {"name": "LAUGHTER", "meaning": "Presages difficult circumstances."},
+    {"name": "LAVENDER", "meaning": "(To smell or to see it growing) Good luck."},
+    {"name": "LAWN", "meaning": "(Looking at) Good health and prosperity: (running on) worry and annoyance."},
+    {"name": "LAWYER", "meaning": "Trouble, quarrels, expenses, losses."},
+    {"name": "LEAD", "meaning": "An inheritance or legacy from beloved friend."}, {
+        "name": "LEAF",
+        "meaning": "(To dream of being covered with leaves) Difficulties will prove to be only temporary: (faded leaves) disappointed hopes."
+    }, {"name": "MAGPIE", "meaning": "A bad sign; back-biting and scandal by a false friend."},
+    {"name": "MAN", "meaning": "For a young girl to dream about a man is a warning against gossip and gossipers."},
+    {"name": "MANURE", "meaning": "Financial gain: good crops."},
+    {"name": "MAP", "meaning": "News or visit from a friend abroad."}, {"name": "MARBLE", "meaning": "An inheritance."},
+    {"name": "MARRIAGE", "meaning": "To dream that one marries is a bad, unhappy sign."},
+    {"name": "MASS", "meaning": "(Attending Mass) Happiness and health."},
+    {"name": "MAST", "meaning": "To dream of tall, towering masts is a sign of prosperity."},
+    {"name": "MATCHES", "meaning": "An increase in wealth."},
+    {"name": "MAYOR", "meaning": "An elevation to place of dignity and respect."},
+    {"name": "MEADOW", "meaning": "A lucky bargain, comfort, and prosperity."},
+    {"name": "MELANCHOLY", "meaning": "A presage of mirth and happiness."},
+    {"name": "MENAGERIE", "meaning": "Enemies will fail to injure: friends will be true."},
+    {"name": "MENDING", "meaning": "(Clothes, etc.) Unhappiness, submission to others."},
+    {"name": "MERMAID", "meaning": "Bad luck and misfortune, especially to sailors and those who live by the sea."},
+    {"name": "MERRY", "meaning": "(Being) A presage of sadness and gloom."},
+    {"name": "MESSAGE", "meaning": "(Receiving one) An advance in life."},
+    {"name": "MIDWIFE", "meaning": "An increase in the family."}, {
+        "name": "MILK",
+        "meaning": "A sign of peaceful circumstances; often means an increase in family: (spilling) loss in business."
+    }, {"name": "MINCE PIES", "meaning": "(Making) Good luck, a valuable present; (eating) good news."},
+    {"name": "MINT", "meaning": "An improvement in health."}, {
+        "name": "MIRROR",
+        "meaning": "(Married folk dreaming) Children: (young people) sweethearts: (seeing own face) failure of cherished project."
+    }, {
+        "name": "NEEDLE",
+        "meaning": "Love or family quarrels: (unable to thread needle) baseless suspicions causing trouble."
+    }, {"name": "NEGRO", "meaning": "Unlucky: a warning of trouble."},
+    {"name": "NEST", "meaning": "A good omen: fortunate love: happy family life."}, {
+        "name": "NETTLES",
+        "meaning": "(Stung by them) Sign that the dreamer will make a bold effort to reach a desired end or gain a desired object; for young people to dream thus is a sign that they are in love and wishful to enter the unknown and, possibly, unhappy state of matrimony."
+    }, {"name": "NEWSPAPERS", "meaning": "(Reading them) A presage of news from a foreign country."},
+    {"name": "NIGHT", "meaning": "To dream of night presages sadness and gloom."}, {
+        "name": "NIGHTINGALE",
+        "meaning": "(Hearing nightingales sing) Joyfulness, success in business, good crops, a happy marriage to a good and faithful mate: (for a married woman to dream) she will have children who will become great singers."
+    }, {
+        "name": "NIGHTMARE",
+        "meaning": "To dream of having a nightmare is a sign that the dreamer will be immediately married, and (if a man) his wife will turn out a shrew."
+    }, {
+        "name": "NINE",
+        "meaning": "To see objects or persons to the number of nine intensifies or multiplies the effect, nine being the superlative of superlatives."
+    }, {
+        "name": "NOISE",
+        "meaning": "Hearing loud, discordant noises, particularly if their source is not apparent, is a bad omen."
+    }, {"name": "PEARLS", "meaning": "Weeping and tears, hard times, worry, and treason."}, {
+        "name": "PEARS",
+        "meaning": "(Gathering them) Pleasant companionship and enjoyment: (eating them) sickness and possibly death."
+    }, {
+        "name": "PEAS",
+        "meaning": "(Seeing them growing) Fortunate enterprises: (cooked) good and speedy success and enjoyment of well-gained riches."
+    }, {
+        "name": "PEBBLES",
+        "meaning": "Sorrows and troubles: (young woman dreams) she will be made unhappy by attractive rivals."
+    }, {"name": "PEDDLER", "meaning": "Beware of false friends."},
+    {"name": "PEN", "meaning": "Avoid a friend whose example and advice are bad."},
+    {"name": "PERFUME", "meaning": "An augury of success and happiness."}, {
+        "name": "PERSPIRATION",
+        "meaning": "To dream of being bathed in perspiration foretells the inception of some arduous task which will be successfully achieved."
+    }, {
+        "name": "PETTICOAT",
+        "meaning": "A bad dream portending troubles caused by frivolity, to a man: and to a woman vexations through vanity and pride."
+    }, {"name": "PIANO", "meaning": "(Playing or seeing another play) The death of relations, funeral obsequies."},
+    {"name": "PIG", "meaning": "Good luck, reasonable success in affairs."}, {
+        "name": "PICTURE",
+        "meaning": "To dream of painting pictures denotes that you will engage in some unremunerative, albeit not unpleasant, enterprise."
+    }, {
+        "name": "PIGEON",
+        "meaning": "Domestic peace and comfort, success in exterior affairs. Wild pigeons signify dissolute women: tame pigeons, honest women and wives."
+    }, {"name": "PINE-TREE", "meaning": "Continual happiness and vigorous old age."},
+    {"name": "PINS", "meaning": "Differences and quarrels in families."}, {
+        "name": "PIT",
+        "meaning": "(Falling in) Disappointment in love, misfortunes, danger: (being in, but climbing out) a difficulty overcome."
+    }, {
+        "name": "PLOUGH",
+        "meaning": "A good omen in love, courtship and marriage, though the good may be rather slow in coming."
+    }, {"name": "RABBIT", "meaning": "(White) Success: (black) worry."},
+    {"name": "RACE", "meaning": "To see oneself winning a race is a good omen, except to sick persons."},
+    {"name": "RACES", "meaning": "Bad luck: losses by trickery and swindling of low persons."},
+    {"name": "RAGS", "meaning": "(Being dressed in) Success and prosperity after much striving."},
+    {"name": "RAILWAY", "meaning": "A journey: (accident) a break in friendship."}, {
+        "name": "RAIN",
+        "meaning": "A lucky omen: an inheritance, prosperity, good crops: (heavy storm) troubles and difficulties."
+    }, {
+        "name": "RAINBOW",
+        "meaning": "Change of residence or manner of life: (if seen on the right hand) a change for the better: (if on the left) an Irishman's rise."
+    }, {"name": "RAT", "meaning": "Treachery from inferiors: (white rat) good fortune."}, {
+        "name": "RAVEN",
+        "meaning": "Bad luck to the business man, disappointment to the lover, separation to the married."
+    }, {"name": "RAZOR", "meaning": "An unhappy portent: love quarrels."},
+    {"name": "SNAKE, SERPENT", "meaning": "Bad luck, sickness, short life."}, {
+        "name": "SNOW",
+        "meaning": "Success, money, plentiful harvest: (eating snow) the dreamer will soon undertake a difficult journey: (lost in snow) hostilities of enemies."
+    }, {"name": "SOAP", "meaning": "A way out of pressing difficulties will present itself."},
+    {"name": "SOWING", "meaning": "An indication of doubtful enterprises."}, {
+        "name": "SPADE",
+        "meaning": "To dream of using a spade is a sign that the dreamer will commit indiscretions which he will endeavor to hide."
+    }, {
+        "name": "SPARROW",
+        "meaning": "Troubles: (many) an early journey: (sparrow struggling to escape) a foreboding of mischief."
+    }, {"name": "SPECTACLES", "meaning": "Be on guard against persons trying to deceive."},
+    {"name": "SPECTRE", "meaning": "An omen of misfortune and disaster."},
+    {"name": "SPIDER", "meaning": "Good luck, successful schemes: (killing one) a very bad omen."},
+    {"name": "SPINNING", "meaning": "Worry and trouble in which strangers are mixed."},
+    {"name": "STABLE", "meaning": "Prepare for the visit of a true friend."},
+    {"name": "STAIN", "meaning": "(To dream of rubbing out stains which reappear) Retribution and punishment for sin."},
+    {"name": "TABLE", "meaning": "(Sitting at) A sign of comfort and prosperity, a happy marriage."},
+    {"name": "TEA", "meaning": "Trouble that will cause sleeplessness and bad health."}, {
+        "name": "TEAR",
+        "meaning": "To dream of tearing paper while reading is a sign that business perplexities will be smoothed away."
+    }, {"name": "TEARS", "meaning": "A presage of great joy and merriment."}, {
+        "name": "TEETH",
+        "meaning": "In a dream teeth denote relatives, the two front teeth representing children, brothers or sisters, and others are distant relations. Losing a tooth is a sign of death of a relative: the loss of all in any way means that the dreamer will outlive all his family."
+    }, {"name": "THIEVES", "meaning": "A warning against gossipers and tattlers."},
+    {"name": "THIMBLE", "meaning": "The loss of employment."}, {
+        "name": "THREAD",
+        "meaning": "Beware of intrigues: (breaking) poverty: (entangling the thread of a spool or skein) difficulties, perplexities, business troubles."
+    }, {
+        "name": "WALK",
+        "meaning": "(Alone and slowly) A sign of poverty and sadness: (fast) success in a desired object: (through fire) danger: (on water or on the sea) bad luck: (with somebody else) enjoyment of comfort and companionship: (girl to walk with her lover) a comfortable and happy marriage."
+    }, {
+        "name": "WALL",
+        "meaning": "Many obstacles in realizing a future plan: (climbing over or destroying) obstacles successfully surmounted: (jumping over) joy and happiness."
+    }, {
+        "name": "WASH",
+        "meaning": "(Body) Release from anxieties: (clothes) a presage of hard and unrequited toil for others."
+    }, {"name": "WASPS", "meaning": "Vexation and troubles caused by envious persons."},
+    {"name": "WATCH", "meaning": "Gains, money, prosperity."}, {
+        "name": "WATER",
+        "meaning": "(Clear) Comfort and happiness: (dirty) sorrow and trouble: (stagnant) severe illness, probably ending with death: (very cold) beware of enemies: (hot) illness: (seeing in improbable places or circumstances) trouble and danger: (dried up or disturbed) an improvement in affairs: (gushing up from below) a sign of unsuspected enemies: (carrying it in a sieve or other unlikely receptacle without spilling) much domestic trouble, disappointment, great losses: (another person doing so) good luck to the dreamer or to that person, or good luck to the dreamer in connection with that person: (drinking clear water) a lucky sign, comfort and satisfaction."
     }];
 
-function writeRandomDreams(){
-    for(var i = 0; i < 10; i++) {
+function writeRandomDreams() {
+    for (var i = 0; i < 10; i++) {
         var dream = dreams[Math.floor(Math.random() * dreams.length)];
         document.write("<p><b>" + dream.name + ":</b> " + dream.meaning + "</p>");
     }
