@@ -945,6 +945,6 @@ function getRandomFaClass() {
 function writeIcons() {
     var i;
     for(i = 0; i < 10; i++) {
-        document.write("<i class=\"fas fa-" + getRandomFaClass() + " fa-5x\"></i> &nbsp; ");
+        document.write("<div class='card'><div class='card-section'> <p><i class=\"fas fa-" + getRandomFaClass() + " fa-5x\"></i></p></div></div>");
     }
 }

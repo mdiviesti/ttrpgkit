@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Random Words from a Set of Sample Data</title>
+    <script type="text/javascript" src="js/name_generator.js"></script>
+    <script type="text/javascript" src="js/sample_sets.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    Object.keys(name_set).sort().forEach(function(key) {
+        document.write("<h1>" + key + "</h1>");
+        name_list(key, 20).sort().forEach(function(v, k){
+            document.write(v + "<br>");
+        });
+        document.write("<br>");
+
+    });
+</script>
+</body>
+</html>

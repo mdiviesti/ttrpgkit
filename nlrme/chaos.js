@@ -8071,6 +8071,6 @@ var chaos = ["1d10 of caster's fingers turn to stone",
 function writeRandom() {
     for (var i = 0; i < 10; i++) {
         var effect = chaos[Math.floor(Math.random() * chaos.length)];
-        document.write("<p>" + effect + "</p>");
+        document.write("<div class='card'><div class='card-section'> <p>" + effect + "</p></div></div>");
     }
 }

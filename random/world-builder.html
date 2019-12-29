@@ -1,0 +1,100 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet'
+          type='text/css'>
+    <script src="js/d3.v4.js"></script>
+
+    <script src="js/priority-queue.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <style>
+        svg {
+            float: left;
+            background-color: white;
+        }
+
+    </style>
+    <script type="text/javascript" src="js/name_generator.js"></script>
+    <script type="text/javascript" src="js/sample_sets.js"></script>
+
+    <script src="js/terrain.js"></script>
+    <script type="text/javascript">
+        function downloadSVG(){
+            var svgData = $("svg#finalSVG")[0].outerHTML;
+            var svgBlob = new Blob([svgData], {type:"image/svg+xml;charset=utf-8"});
+            var svgUrl = URL.createObjectURL(svgBlob);
+            var downloadLink = document.createElement("a");
+            downloadLink.href = svgUrl;
+            downloadLink.download = "map.svg";
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+    </script>
+
+</head>
+<body>
+<div id="somediv" class="row">
+</div>
+<div id="instructions" class="row">
+    <a class="success" onclick="downloadSVG()">Download SVG</a>
+</div>
+<script type="text/javascript">
+    function addSVG(div) {
+        return div.insert("svg", ":first-child")
+            .attr("id", "finalSVG")
+            .attr("height", 400)
+            .attr("width", 500)
+            .attr("viewBox", "-400 -400 800 800")
+            .attr("xmlns", "http://www.w3.org/2000/svg")
+            .attr("xmlns:xlink", "http://www.w3.org/1999/xlink")
+            .attr("class", "column");
+    }
+
+    function populateMap() {
+        doMap(d3.select("svg#finalSVG"), defaultParams);
+    }
+
+    function getRegions() {
+        var regions = d3.selectAll("text.region");
+        var cities = d3.selectAll("text.city");
+        document.write("<div class=\"column\">");
+        document.write("<h1>Regions</h1>");
+        regions.each(function (d, i) {
+            document.write(d.text + "<br>");
+        });
+        document.write("</div>");
+        document.write("<div class=\"column\">");
+        document.write("<h1>Cities</h1>");
+        cities.each(function (d, i) {
+            document.write(d.text + "<br>");
+        });
+        document.write("</div>");
+    }
+
+    var meshDiv = d3.select("div#somediv");
+    addSVG(meshDiv);
+    populateMap()
+
+</script>
+<div id="generatednames" class="row medium-up-3 large-up-4">
+    <script type="text/javascript">
+        getRegions();
+        Object.keys(name_set).sort().forEach(function (key) {
+            document.write("<div class=\"column\">");
+            document.write("<h1>" + key + "</h1>");
+            name_list(key, 20).sort().forEach(function (v, k) {
+                document.write(v + "<br>");
+            });
+            document.write("<br>");
+            document.write("</div>");
+
+        });
+    </script>
+</div>
+<script>
+    $(document).foundation();
+</script>
+</body>
+</html>
