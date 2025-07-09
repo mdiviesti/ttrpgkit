@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&D Combined Journals</title>
+  <style>
+    :root {
+      --color-bg-light: #f8f8fa;
+      --color-bg-dark: #23272e;
+      --color-bg-sidebar-dark: #23272e;
+      --color-bg-sidebar-light: #f8f8fa;
+      --color-bg-main-dark: #181a1b;
+      --color-bg-main-light: #fff;
+      --color-border-dark: #222c3a;
+      --color-border-light: #e0e0e0;
+      --color-text-dark: #f4f7fa;
+      --color-text-light: #222;
+      --color-link-hover-dark: #2d323c;
+      --color-link-hover-light: #e0e0e0;
+      --color-accent: #2a4d7a;
+      --color-searchbar-bg-light: #f8f8fa;
+      --color-searchbar-bg-dark: #23272e;
+      --color-searchbar-border-light: #e0e0e0;
+      --color-searchbar-border-dark: #222c3a;
+      --color-searchbar-input-bg-light: #fff;
+      --color-searchbar-input-bg-dark: #181a1b;
+      --color-searchbar-input-border-light: #ccc;
+      --color-searchbar-input-border-dark: #444;
+    }
+    [data-theme="dark"] body,
+    [data-theme="dark"] .sidebar,
+    [data-theme="dark"] .sidebar-header,
+    [data-theme="dark"] .sidebar-list,
+    [data-theme="dark"] .main-panel,
+    [data-theme="dark"] .main-content,
+    [data-theme="dark"] .right-panel,
+    [data-theme="dark"] .right-content {
+      background: var(--color-bg-main-dark) !important;
+      color: var(--color-text-dark) !important;
+    }
+    [data-theme="dark"] .sidebar {
+      background: var(--color-bg-sidebar-dark) !important;
+      border-right: 1px solid var(--color-border-dark) !important;
+    }
+    [data-theme="dark"] .sidebar-header {
+      background: #1e2228 !important;
+      border-bottom: 1px solid var(--color-border-dark) !important;
+    }
+    [data-theme="dark"] .sidebar-list {
+      background: var(--color-bg-sidebar-dark) !important;
+    }
+    [data-theme="dark"] .sidebar-link.active, [data-theme="dark"] .sidebar-link:hover {
+      background: var(--color-link-hover-dark) !important;
+    }
+    [data-theme="dark"] .main-panel, [data-theme="dark"] .main-content {
+      background: var(--color-bg-main-dark) !important;
+      color: var(--color-text-dark) !important;
+    }
+    [data-theme="dark"] .right-panel, [data-theme="dark"] .right-content {
+      background: #23272e !important;
+      color: var(--color-text-dark) !important;
+      border-left: 1px solid var(--color-border-dark) !important;
+    }
+    [data-theme="dark"] .resizer {
+      background: #444 !important;
+    }
+    [data-theme="dark"] .resizer:hover, [data-theme="dark"] .resizer.active { background: #666 !important; }
+    [data-theme="dark"] #search-bar-root > div {
+      background: var(--color-searchbar-bg-dark) !important;
+      border-bottom: 1px solid var(--color-searchbar-border-dark) !important;
+    }
+    [data-theme="dark"] #search-bar-root input[type="text"] {
+      background: var(--color-searchbar-input-bg-dark) !important;
+      color: var(--color-text-dark) !important;
+      border: 1px solid var(--color-searchbar-input-border-dark) !important;
+    }
+    [data-theme="dark"] .theme-toggle-btn {
+      border: 1px solid var(--color-searchbar-input-border-dark) !important;
+      background: var(--color-searchbar-bg-dark) !important;
+      color: var(--color-text-dark) !important;
+    }
+    [data-theme="dark"] .theme-toggle-btn:hover {
+      background: var(--color-link-hover-dark) !important;
+    }
+    [data-theme="light"] body,
+    [data-theme="light"] .sidebar,
+    [data-theme="light"] .sidebar-header,
+    [data-theme="light"] .sidebar-list,
+    [data-theme="light"] .main-panel,
+    [data-theme="light"] .main-content,
+    [data-theme="light"] .right-panel,
+    [data-theme="light"] .right-content {
+      background: var(--color-bg-main-light) !important;
+      color: var(--color-text-light) !important;
+    }
+    [data-theme="light"] .sidebar {
+      background: var(--color-bg-sidebar-light) !important;
+      border-right: 1px solid var(--color-border-light) !important;
+    }
+    [data-theme="light"] .sidebar-header {
+      background: #e8eaf0 !important;
+      border-bottom: 1px solid var(--color-border-light) !important;
+    }
+    [data-theme="light"] .sidebar-list {
+      background: var(--color-bg-sidebar-light) !important;
+    }
+    [data-theme="light"] .sidebar-link.active, [data-theme="light"] .sidebar-link:hover {
+      background: var(--color-link-hover-light) !important;
+    }
+    [data-theme="light"] .main-panel, [data-theme="light"] .main-content {
+      background: var(--color-bg-main-light) !important;
+      color: var(--color-text-light) !important;
+    }
+    [data-theme="light"] .right-panel, [data-theme="light"] .right-content {
+      background: #f4f7fa !important;
+      color: var(--color-text-light) !important;
+      border-left: 1px solid var(--color-border-light) !important;
+    }
+    [data-theme="light"] .resizer {
+      background: #e0e0e0 !important;
+    }
+    [data-theme="light"] .resizer:hover, [data-theme="light"] .resizer.active { background: #b0b0b0 !important; }
+    [data-theme="light"] #search-bar-root > div {
+      background: var(--color-searchbar-bg-light) !important;
+      border-bottom: 1px solid var(--color-searchbar-border-light) !important;
+    }
+    [data-theme="light"] #search-bar-root input[type="text"] {
+      background: var(--color-searchbar-input-bg-light) !important;
+      color: var(--color-text-light) !important;
+      border: 1px solid var(--color-searchbar-input-border-light) !important;
+    }
+    [data-theme="light"] .theme-toggle-btn {
+      border: 1px solid var(--color-searchbar-input-border-light) !important;
+      background: var(--color-searchbar-bg-light) !important;
+      color: var(--color-text-light) !important;
+    }
+    [data-theme="light"] .theme-toggle-btn:hover {
+      background: var(--color-link-hover-light) !important;
+    }
+    .layout { display: flex; min-height: 100vh; width: 100vw; overflow: hidden; }
+    .panel {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+    /* Sticky search bar at the top */
+    #search-bar-root {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: inherit;
+    }
+    #search-bar-root > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.7em;
+      padding: 0.7em 1em 0.5em 1em;
+      position: relative;
+      transition: background 0.2s, border-bottom 0.2s;
+    }
+    .theme-toggle-btn {
+      background: none;
+      border: 1px solid var(--color-border-light);
+      color: inherit;
+      border-radius: 4px;
+      padding: 0.2em 0.7em;
+      font-size: 1em;
+      cursor: pointer;
+      margin-left: 1em;
+      transition: background 0.2s, color 0.2s;
+    }
+    .theme-toggle-btn:hover {
+      background: var(--color-link-hover-light);
+    }
+    .sidebar {
+      width: 260px;
+      min-width: 100px;
+      max-width: 400px;
+      background: #23272e;
+      color: #fff;
+      border-right: 1px solid #222c3a;
+      transition: width 0.2s;
+      overflow: hidden;
+      font-size: 0.97em;
+      z-index: 1;
+    }
+    .sidebar-header {
+      font-size: 1em;
+      font-weight: bold;
+      padding: 0.7em 1em;
+      background: #1e2228;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #222c3a;
+    }
+    .sidebar-toggle {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-left: 0.5em;
+    }
+    .sidebar-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      background: #23272e;
+    }
+    .sidebar-list li {
+      border-bottom: 1px solid #222c3a;
+      margin: 0;
+    }
+    .sidebar-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      padding: 0.55em 1em;
+      cursor: pointer;
+      transition: background 0.15s;
+      font-size: 1em;
+    }
+    .sidebar-link.active, .sidebar-link:hover {
+      background: #2d323c;
+    }
+    .resizer {
+      width: 6px;
+      cursor: ew-resize;
+      background: #e0e0e0;
+      transition: background 0.2s;
+      z-index: 2;
+    }
+    .resizer:hover, .resizer.active { background: #b0b0b0; }
+    .main-panel {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      overflow: hidden;
+    }
+    .main-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 2em 3vw;
+      min-width: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+    .right-panel {
+      width: 50vw;
+      min-width: 180px;
+      background: #f4f7fa;
+      border-left: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .right-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 2em 2vw;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+    .entry-title { font-size: 1.5em; font-weight: bold; margin-bottom: 0.2em; }
+    .entry-date { color: #888; font-size: 1em; margin-bottom: 1.2em; }
+    .page { margin-bottom: 1.5em; padding-left: 1em; border-left: 3px solid #e0e0e0; }
+    .page-title { font-weight: bold; color: var(--color-accent); margin-bottom: 0.2em; }
+    .page-content { white-space: pre-wrap; }
+    .highlight-search {
+      background: #ffe066;
+      color: #222 !important;
+      border-radius: 2px;
+      padding: 0 2px;
+      border: 1px solid #e6c200;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
+      transition: color 0.2s, background 0.2s;
+    }
+    .highlight-search-current {
+      outline: 2.5px solid #ffb700;
+      background: #ffe066;
+      color: #fff !important;
+      /* Use color based on theme */
+    }
+    [data-theme="light"] .highlight-search {
+      color: #222 !important;
+    }
+    [data-theme="light"] .highlight-search-current {
+      color: #fff !important;
+      background: #ffb700;
+    }
+    [data-theme="dark"] .highlight-search {
+      color: #222 !important;
+    }
+    [data-theme="dark"] .highlight-search-current {
+      color: #fff !important;
+      background: #ffb700;
+    }
+    @media (max-width: 900px) {
+      .layout { flex-direction: column; }
+      .sidebar, .right-panel { width: 100vw !important; min-width: 0 !important; max-width: 100vw !important; }
+      .main-panel { flex-direction: column; }
+      .main-content, .right-content { padding: 1em 2vw; }
+      .resizer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="search-bar-root"></div>
+  <div class="layout">
+    <nav class="sidebar panel" id="sidebar">
+      <div class="sidebar-header">
+        <span id="sidebar-title">Journals</span>
+        <button class="sidebar-toggle" id="sidebar-toggle" title="Toggle sidebar">&#9776;</button>
+      </div>
+      <ul class="sidebar-list" id="sidebar-list"></ul>
+    </nav>
+    <div class="resizer" id="resizer-left"></div>
+    <div class="main-panel panel" id="main-panel">
+      <main class="main-content" id="main-content">
+        <div style="color:#888;">Select a journal entry from the left.</div>
+      </main>
+    </div>
+    <div class="resizer" id="resizer-right"></div>
+    <aside class="right-panel panel" id="right-panel">
+      <div class="right-content" id="right-content">
+        <div style="color:#888;">AI Recap will appear here.</div>
+      </div>
+    </aside>
+  </div>
+  <script>
+    function formatDate(ts) {
+      if (!ts || isNaN(ts)) return '';
+      const d = new Date(ts);
+      return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+    }
+    let entries = [];
+    let currentIdx = null;
+    let glossary = [];
+    let recap = [];
+    let searchTerm = '';
+
+    // Load glossary for expansion
+    fetch('glossary.json')
+      .then(r => r.json())
+      .then(gdata => {
+        glossary = gdata.glossary || [];
+        window.expansionMap = {};
+        glossary.forEach(entry => {
+          window.expansionMap[entry.shorthand] = entry.longhand;
+        });
+        // Now load both entries and recap
+        return Promise.all([
+          fetch('combined_journals.json').then(r => r.json()),
+          fetch('recap.json').then(r => r.json())
+        ]);
+      })
+      .then(([entriesData, recapData]) => {
+        entries = entriesData;
+        recap = recapData;
+        renderSidebar();
+        if (entries.length) {
+          showEntry(0);
+        }
+      });
+
+    function expandShorthand(text) {
+      if (!window.expansionMap) return text;
+      // Replace all shorthands with longhand, word-boundary/case-insensitive
+      let result = text;
+      for (const [sh, long] of Object.entries(window.expansionMap)) {
+        // Only expand if not preceded by an alphanumeric (to match compression logic)
+        const pattern = new RegExp(`(?<![a-zA-Z0-9])${sh}(s|s'|'s)?(?![a-zA-Z])`, 'gi');
+        result = result.replace(pattern, (m, suffix) => {
+          if (!suffix) return long;
+          if (suffix.toLowerCase() === 's') return long + 's';
+          if (suffix.toLowerCase() === "'s") return long + "'s";
+          if (suffix.toLowerCase() === "s'") return long + "s'";
+          return long;
+        });
+      }
+      return result;
+    }
+
+    function formatSidebarTitle(entry) {
+      let name = entry.name || '(No Title)';
+      // Remove 'review' (case-insensitive, as a word, even if surrounded by underscores or spaces)
+      name = name.replace(/[_\s]*review[_\s]*/gi, ' ');
+      // Remove 6-digit numbers (with optional leading/trailing spaces)
+      name = name.replace(/\s*\d{6}\s*/g, ' ');
+      // Convert underscores to spaces
+      name = name.replace(/_/g, ' ');
+      // Trim leading/trailing spaces and collapse multiple spaces
+      name = name.replace(/\s{2,}/g, ' ').trim();
+      // Remove everything before the first alphanumerical character and after the last alphanumerical character
+      name = name.replace(/^[^a-zA-Z0-9]+/, '').replace(/[^a-zA-Z0-9]+$/, '');
+      // Prepend date in mm/dd/yyyy format if available, followed by ' | '
+      let dateStr = '';
+      if (entry.date) {
+        const d = new Date(entry.date);
+        if (!isNaN(d)) {
+          const mm = String(d.getMonth() + 1).padStart(2, '0');
+          const dd = String(d.getDate()).padStart(2, '0');
+          const yyyy = d.getFullYear();
+          dateStr = `${mm}/${dd}/${yyyy} | `;
+        }
+      }
+      return dateStr + name;
+    }
+
+    // Move search bar to sticky top and center it in a root div
+    const searchBarRoot = document.getElementById('search-bar-root');
+    const searchBarContainer = document.createElement('div');
+    searchBarContainer.style.position = 'sticky';
+    searchBarContainer.style.top = '0';
+    searchBarContainer.style.zIndex = '10';
+    searchBarContainer.style.background = '#f8f8fa';
+    searchBarContainer.style.padding = '0.7em 1em 0.5em 1em';
+    searchBarContainer.style.borderBottom = '1px solid #e0e0e0';
+    searchBarContainer.style.display = 'flex';
+    searchBarContainer.style.justifyContent = 'center';
+    searchBarContainer.style.alignItems = 'center';
+    searchBarContainer.style.gap = '0.7em';
+    const searchLabel = document.createElement('span');
+    searchLabel.textContent = 'Search:';
+    searchLabel.style.fontWeight = 'bold';
+    searchLabel.style.fontSize = '1em';
+    const searchBox = document.createElement('input');
+    searchBox.type = 'text';
+    searchBox.placeholder = 'Type to search...';
+    searchBox.style.flex = 'unset';
+    searchBox.style.width = '320px';
+    searchBox.style.maxWidth = '90vw';
+    searchBox.style.fontSize = '1em';
+    searchBox.style.padding = '0.2em 0.5em';
+    searchBox.style.borderRadius = '4px';
+    searchBox.style.border = '1px solid #ccc';
+    searchBox.style.outline = 'none';
+    searchBarContainer.appendChild(searchLabel);
+    searchBarContainer.appendChild(searchBox);
+    searchBarRoot.appendChild(searchBarContainer);
+
+    const themeBtn = document.createElement('button');
+    themeBtn.className = 'theme-toggle-btn';
+    themeBtn.title = 'Toggle light/dark mode';
+    themeBtn.textContent = '🌓';
+    searchBarContainer.appendChild(themeBtn);
+    searchBarRoot.appendChild(searchBarContainer);
+
+    // Add search navigation UI (match count, up/down arrows) to the search bar. Track all match positions across notes. Allow navigation with up/down, auto-advance to next/prev note. Highlight current match with .highlight-search-current and scroll into view. Update highlightSearch to mark the current match.
+    const searchNavContainer = document.createElement('span');
+    searchNavContainer.style.display = 'flex';
+    searchNavContainer.style.alignItems = 'center';
+    searchNavContainer.style.gap = '0.3em';
+    const matchCountSpan = document.createElement('span');
+    matchCountSpan.style.fontSize = '0.97em';
+    matchCountSpan.style.color = '#888';
+    const upBtn = document.createElement('button');
+    upBtn.textContent = '▲';
+    upBtn.title = 'Previous match';
+    upBtn.style.fontSize = '1em';
+    upBtn.style.padding = '0 0.4em';
+    upBtn.style.border = '1px solid #ccc';
+    upBtn.style.background = 'none';
+    upBtn.style.cursor = 'pointer';
+    upBtn.style.borderRadius = '2px';
+    const downBtn = document.createElement('button');
+    downBtn.textContent = '▼';
+    downBtn.title = 'Next match';
+    downBtn.style.fontSize = '1em';
+    downBtn.style.padding = '0 0.4em';
+    downBtn.style.border = '1px solid #ccc';
+    downBtn.style.background = 'none';
+    downBtn.style.cursor = 'pointer';
+    downBtn.style.borderRadius = '2px';
+    searchNavContainer.appendChild(matchCountSpan);
+    searchNavContainer.appendChild(upBtn);
+    searchNavContainer.appendChild(downBtn);
+    searchBarContainer.appendChild(searchNavContainer);
+
+    // State for navigation
+    let matchIndexes = []; // [{entryIdx, panel: 'main'|'right', nodeIdx, matchIdxInNode, globalIdx}]
+    let currentMatchGlobalIdx = 0;
+
+    function getAllMatchesInEntry(entryIdx) {
+      // Returns [{panel, nodeIdx, matchIdxInNode, node, entryIdx, globalIdx}]
+      // nodeIdx: 0=title, 1=page1title, 2=page1content, ...
+      // For right panel: 0=title, 1=tags, 2=session_summary, 3=char1, ...
+      let matches = [];
+      if (!searchTerm || !searchTerm.trim()) return matches;
+      const term = searchTerm.trim();
+      // Main panel
+      const e = entries[entryIdx];
+      let nodeIdx = 0;
+      let textNodes = [expandShorthand(e.name||''), ...((e.pages||[]).flatMap(p=>[expandShorthand(p.name||''), expandShorthand(p.content||'')]))];
+      textNodes.forEach((txt, i) => {
+        let re = new RegExp(escapeRegExp(term), 'gi');
+        let m, idx=0;
+        while ((m = re.exec(txt)) !== null) {
+          matches.push({panel:'main', nodeIdx:i, matchIdxInNode:idx++, entryIdx, globalIdx:0});
+        }
+      });
+      // Right panel
+      const aiRecap = findRecap(e);
+      if (aiRecap) {
+        let rightNodes = [expandShorthand(aiRecap.title||''), (aiRecap.tags||[]).map(t=>expandShorthand(t)).join(', '), removeFirstColonHeader(expandShorthand(aiRecap.session_summary||''))];
+        if (aiRecap.character_summaries) {
+          rightNodes = rightNodes.concat(Object.entries(aiRecap.character_summaries).map(([char,sum])=>expandShorthand(char)+': '+removeFirstColonHeader(expandShorthand(sum))));
+        }
+        rightNodes.forEach((txt, i) => {
+          let re = new RegExp(escapeRegExp(term), 'gi');
+          let m, idx=0;
+          while ((m = re.exec(txt)) !== null) {
+            matches.push({panel:'right', nodeIdx:i, matchIdxInNode:idx++, entryIdx, globalIdx:0});
+          }
+        });
+      }
+      return matches;
+    }
+    function getAllMatchesAllEntries(filteredIndexes) {
+      let all = [];
+      let globalIdx = 0;
+      filteredIndexes.forEach(entryIdx => {
+        let ms = getAllMatchesInEntry(entryIdx);
+        ms.forEach(m => { m.globalIdx = globalIdx++; });
+        all.push(...ms);
+      });
+      return all;
+    }
+    function updateMatchNavUI() {
+      if (!searchTerm || matchIndexes.length === 0) {
+        matchCountSpan.textContent = '';
+        upBtn.disabled = true;
+        downBtn.disabled = true;
+        return;
+      }
+      matchCountSpan.textContent = `${currentMatchGlobalIdx+1} of ${matchIndexes.length}`;
+      upBtn.disabled = false;
+      downBtn.disabled = false;
+    }
+    upBtn.addEventListener('click', () => {
+      if (!searchTerm || matchIndexes.length === 0) return;
+      let nextIdx = currentMatchGlobalIdx - 1;
+      if (nextIdx < 0) {
+        // Go to previous note with matches if possible
+        let prevEntryIdx = null;
+        for (let i = matchIndexes[currentMatchGlobalIdx].entryIdx-1; i >= 0; --i) {
+          if (getAllMatchesInEntry(i).length) { prevEntryIdx = i; break; }
+        }
+        if (prevEntryIdx !== null) {
+          showEntry(prevEntryIdx);
+          setTimeout(()=>{
+            matchIndexes = getAllMatchesAllEntries([prevEntryIdx]);
+            currentMatchGlobalIdx = matchIndexes.length-1;
+            highlightCurrentMatch();
+            updateMatchNavUI();
+          }, 0);
+        }
+        return;
+      }
+      currentMatchGlobalIdx = nextIdx;
+      const entryIdx = matchIndexes[currentMatchGlobalIdx].entryIdx;
+      showEntry(entryIdx);
+      setTimeout(()=>{
+        highlightCurrentMatch();
+        updateMatchNavUI();
+      }, 0);
+    });
+    downBtn.addEventListener('click', () => {
+      if (!searchTerm || matchIndexes.length === 0) return;
+      let nextIdx = currentMatchGlobalIdx + 1;
+      if (nextIdx >= matchIndexes.length) {
+        // Go to next note with matches if possible
+        let nextEntryIdx = null;
+        for (let i = matchIndexes[currentMatchGlobalIdx].entryIdx+1; i < entries.length; ++i) {
+          if (getAllMatchesInEntry(i).length) { nextEntryIdx = i; break; }
+        }
+        if (nextEntryIdx !== null) {
+          showEntry(nextEntryIdx);
+          setTimeout(()=>{
+            matchIndexes = getAllMatchesAllEntries([nextEntryIdx]);
+            currentMatchGlobalIdx = 0;
+            highlightCurrentMatch();
+            updateMatchNavUI();
+          }, 0);
+        }
+        return;
+      }
+      currentMatchGlobalIdx = nextIdx;
+      const entryIdx = matchIndexes[currentMatchGlobalIdx].entryIdx;
+      showEntry(entryIdx);
+      setTimeout(()=>{
+        highlightCurrentMatch();
+        updateMatchNavUI();
+      }, 0);
+    });
+    function highlightCurrentMatch() {
+      // After rendering, scroll the current .highlight-search into view, centered in its scrollable panel
+      setTimeout(() => {
+        const all = document.querySelectorAll('.highlight-search');
+        if (all.length && matchIndexes.length) {
+          const el = all[currentMatchGlobalIdx];
+          if (el) {
+            // Find the closest scrollable panel (main-content or right-content)
+            let panel = el.closest('.main-content, .right-content');
+            if (panel) {
+              // Calculate offset to center vertically
+              const elRect = el.getBoundingClientRect();
+              const panelRect = panel.getBoundingClientRect();
+              const scrollTop = panel.scrollTop;
+              const elCenter = elRect.top + elRect.height / 2;
+              const panelCenter = panelRect.top + panelRect.height / 2;
+              const offset = elCenter - panelCenter;
+              panel.scrollTop = scrollTop + offset;
+            } else {
+              // Fallback: scroll into view centered in viewport
+              el.scrollIntoView({behavior:'smooth', block:'center'});
+            }
+          }
+        }
+      }, 10);
+    }
+
+    // Theme toggle logic (fix: always apply theme, and update on toggle)
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else if (mode === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.removeItem('theme');
+      }
+      document.body.className = '';
+    }
+    function getSystemTheme() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function applyThemeFromStorage() {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark' || stored === 'light') setTheme(stored);
+      else setTheme(null);
+    }
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      if (!current) {
+        setTheme(getSystemTheme() === 'dark' ? 'light' : 'dark');
+      } else if (current === 'dark') {
+        setTheme('light');
+      } else {
+        setTheme('dark');
+      }
+    });
+    applyThemeFromStorage();
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyThemeFromStorage);
+
+    searchBox.addEventListener('input', e => {
+      searchTerm = searchBox.value;
+      renderSidebar();
+    });
+
+    // Remove old search box from sidebar header if present
+    const oldSearch = document.querySelector('.sidebar-header input[type="text"]');
+    if (oldSearch) oldSearch.remove();
+
+    function renderSidebar() {
+      const list = document.getElementById('sidebar-list');
+      let filteredEntries = entries;
+      let filteredIndexes = entries.map((_, idx) => idx);
+      if (searchTerm) {
+        const term = searchTerm.toLowerCase();
+        filteredEntries = entries.filter(entry => {
+          // Search in name, date, and all page content, expanding shorthands for search
+          let haystack = (entry.name || '') + ' ' + (entry.date || '');
+          if (entry.pages && entry.pages.length) {
+            haystack += ' ' + entry.pages.map(p => (p.name || '') + ' ' + (p.content || '')).join(' ');
+          }
+          // Expand shorthands in haystack for search
+          let expandedHaystack = expandShorthand(haystack).toLowerCase();
+          return expandedHaystack.includes(term);
+        });
+        // Track the indexes of filtered entries in the original entries array
+        filteredIndexes = entries.map((entry, idx) => filteredEntries.includes(entry) ? idx : -1).filter(idx => idx !== -1);
+      }
+      list.innerHTML = filteredEntries.map((entry, idx) =>
+        `<li><a class="sidebar-link${idx===0?' active':''}" data-idx="${filteredIndexes[idx]}">${formatSidebarTitle(entry)}</a></li>`
+      ).join('');
+      list.querySelectorAll('.sidebar-link').forEach((link, i) => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const idx = +link.getAttribute('data-idx');
+          showEntry(idx);
+        });
+      });
+      // Auto-load the first matching entry after a search
+      if (filteredIndexes.length > 0) {
+        showEntry(filteredIndexes[0]);
+      } else {
+        // If no results, clear main and right panels
+        document.getElementById('main-content').innerHTML = '<div style="color:#888;">No matching journal entry found.</div>';
+        document.getElementById('right-content').innerHTML = '<div style="color:#888;">No AI recap found for this entry.</div>';
+      }
+      matchIndexes = getAllMatchesAllEntries(filteredIndexes);
+      currentMatchGlobalIdx = 0;
+      updateMatchNavUI();
+    }
+
+    function findRecap(entry) {
+      if (!recap) return null;
+      const key = (entry.name || '') + (entry.date || '');
+      return recap.find(r => (r.name || '') + (r.date || '') === key);
+    }
+    function removeFirstColonHeader(text) {
+      if (!text) return text;
+      // Remove the first instance of a string (any non-colon chars) ending with a colon and optional whitespace
+      return text.replace(/^([^:\n]+:)[ \t]*/i, '');
+    }
+
+    function escapeRegExp(string) {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+    function highlightSearch(text, entryIdx, panel, nodeIdx) {
+      if (!searchTerm || !searchTerm.trim()) return text;
+      const term = searchTerm.trim();
+      try {
+        const re = new RegExp(`(${escapeRegExp(term)})`, 'gi');
+        let matchIdx = 0;
+        // Find the current match for this entry/panel/node
+        let currentMatch = null;
+        if (matchIndexes.length && typeof currentMatchGlobalIdx === 'number') {
+          currentMatch = matchIndexes[currentMatchGlobalIdx];
+        }
+        return text.split(/(<[^>]+>)/g).map(part => {
+          if (part.startsWith('<')) return part;
+          return part.replace(re, (m) => {
+            let cls = 'highlight-search';
+            // Only apply highlight-search-current if this is the current match in this node
+            if (
+              currentMatch &&
+              currentIdx === entryIdx &&
+              currentMatch.panel === panel &&
+              currentMatch.nodeIdx === nodeIdx &&
+              currentMatch.matchIdxInNode === matchIdx
+            ) {
+              cls += ' highlight-search-current';
+            }
+            matchIdx++;
+            return `<span class="${cls}">${m}</span>`;
+          });
+        }).join('');
+      } catch {
+        return text;
+      }
+    }
+
+    function showEntry(idx) {
+      currentIdx = idx;
+      document.querySelectorAll('.sidebar-link').forEach((l, i) => l.classList.toggle('active', i===idx));
+      const entry = entries[idx];
+      const aiRecap = findRecap(entry);
+      // Main content (center)
+      const main = document.getElementById('main-content');
+      main.innerHTML = `
+        <div class="entry-title">${highlightSearch(expandShorthand(entry.name || '(No Title)'), idx, 'main', 0)}</div>
+        <div class="entry-date">${formatDate(entry.date)}</div>
+        ${entry.pages && entry.pages.length ? entry.pages.map((page, i) => `
+          <div class="page">
+            <div class="page-title">${highlightSearch(expandShorthand(page.name || '(No Page Title)'), idx, 'main', 1 + i*2)}</div>
+            <div class="page-content">${highlightSearch(expandShorthand(page.content || ''), idx, 'main', 2 + i*2)}</div>
+          </div>
+        `).join('') : '<div style="color:#aaa;">No pages.</div>'}
+      `;
+      // Right panel (AI Recap)
+      const right = document.getElementById('right-content');
+      if (aiRecap) {
+        let nodeIdx = 0;
+        right.innerHTML = `
+          <div class="entry-title" style="color:#2a4d7a;">AI Recap</div>
+          <div><b>Title:</b> ${highlightSearch(expandShorthand(aiRecap.title || ''), idx, 'right', nodeIdx++)}</div>
+          <div><b>Tags:</b> ${highlightSearch((aiRecap.tags || []).map(t => expandShorthand(t)).join(', '), idx, 'right', nodeIdx++)}</div>
+          <div style="margin:1em 0;"><b>Session Summary:</b><br>${highlightSearch(removeFirstColonHeader(expandShorthand(aiRecap.session_summary || '')), idx, 'right', nodeIdx++)}</div>
+          <div><b>Character Summaries:</b></div>
+          <ul style="margin:0 0 1em 1.5em;">
+            ${aiRecap.character_summaries ? Object.entries(aiRecap.character_summaries).map(([char, sum], i) =>
+              `<li><b>${highlightSearch(expandShorthand(char), idx, 'right', nodeIdx + i)}:</b> ${highlightSearch(removeFirstColonHeader(expandShorthand(sum)), idx, 'right', nodeIdx + i)}</li>`
+            ).join('') : '<li style="color:#aaa;">None</li>'}
+          </ul>
+        `;
+      } else {
+        right.innerHTML = '<div style="color:#aaa;">No AI recap found for this entry.</div>';
+      }
+      // After rendering, highlight current match if any
+      highlightCurrentMatch();
+    }
+    // Sidebar toggle
+    document.getElementById('sidebar-toggle').addEventListener('click', () => {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('collapsed');
+      document.getElementById('sidebar-title').style.display = sidebar.classList.contains('collapsed') ? 'none' : '';
+    });
+    // Resizer logic for both left and right panels
+    const sidebar = document.getElementById('sidebar');
+    const mainPanel = document.getElementById('main-panel');
+    const rightPanel = document.getElementById('right-panel');
+    const resizerLeft = document.getElementById('resizer-left');
+    const resizerRight = document.getElementById('resizer-right');
+    let isResizingLeft = false;
+    let isResizingRight = false;
+    resizerLeft.addEventListener('mousedown', function(e) {
+      if (sidebar.classList.contains('collapsed')) return;
+      isResizingLeft = true;
+      document.body.style.cursor = 'ew-resize';
+    });
+    resizerRight.addEventListener('mousedown', function(e) {
+      isResizingRight = true;
+      document.body.style.cursor = 'ew-resize';
+    });
+    document.addEventListener('mousemove', function(e) {
+      if (isResizingLeft) {
+        let newWidth = e.clientX;
+        const min = 100, max = 400;
+        if (newWidth < min) newWidth = min;
+        if (newWidth > max) newWidth = max;
+        sidebar.style.width = newWidth + 'px';
+      }
+      if (isResizingRight) {
+        let newWidth = window.innerWidth - e.clientX;
+        const min = 180; /* Remove max-width to allow full resizing */
+        if (newWidth < min) newWidth = min;
+        rightPanel.style.width = newWidth + 'px';
+      }
+    });
+    document.addEventListener('mouseup', function(e) {
+      if (isResizingLeft || isResizingRight) {
+        isResizingLeft = false;
+        isResizingRight = false;
+        document.body.style.cursor = '';
+      }
+    });
+  </script>
+</body>
+</html>

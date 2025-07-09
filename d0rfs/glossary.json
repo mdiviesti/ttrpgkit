@@ -1,0 +1,27 @@
+{
+  "glossary": [
+    {"shorthand": "xb", "longhand": "crossbow", "gmshorthand": ["crossbow", "xbow", "xbows", "xb"]},
+    {"shorthand": "dag", "longhand": "dagger", "gmshorthand": ["dagger", "daggers", "dag"]},
+    {"shorthand": "gp", "longhand": "gold", "gmshorthand": ["gold", "gold pieces", "golds", "gp"]},
+    {"shorthand": "mach", "longhand": "machine", "gmshorthand": ["machine", "machines", "mach"]},
+    {"shorthand": "pois", "longhand": "poison", "gmshorthand": ["poison", "pois", "poisons"]},
+    {"shorthand": "LUX", "longhand": "Luxon", "gmshorthand": ["Luxon", "Lux", "lux"]},
+    {"shorthand": "GAID", "longhand": "Gaidan", "gmshorthand": ["Gaidan", "Gaid", "G"]},
+    {"shorthand": "ELD", "longhand": "Eldaer", "gmshorthand": ["Eldaer", "Eld", "E"]},
+    {"shorthand": "THK", "longhand": "Thokk", "gmshorthand": ["Thokk", "Th", "T"]},
+    {"shorthand": "REIG", "longhand": "Reigar", "gmshorthand": ["Reigar", "Reig", "R"]},
+    {"shorthand": "LUM", "longhand": "Lumm", "gmshorthand": ["Lumm", "Lum", "L"]},
+    {"shorthand": "AMA", "longhand": "Amatar", "gmshorthand": ["Amatar", "Ametar", "Ame", "Ama", "Am", "A"]},
+    {"shorthand": "AFR", "longhand": "Afron", "gmshorthand": ["Afron", "Afr", "Af"]},
+    {"shorthand": "PF", "longhand": "Palma Flora", "gmshorthand": ["Palma Flora", "PF"]},
+    {"shorthand": "PD", "longhand": "Port Damali", "gmshorthand": ["Port Damali", "PD"]},
+    {"shorthand": "YT", "longhand": "Yuan-ti", "gmshorthand": ["Yuan-ti", "YT", "Yt"]},
+    {"shorthand": "WIS", "longhand": "Wisdom", "gmshorthand": ["Wisdom", "wisdom", "WIS"]},
+    {"shorthand": "DEX", "longhand": "Dexterity", "gmshorthand": ["Dexterity", "dexterity", "DEX"]},
+    {"shorthand": "STR", "longhand": "Strength", "gmshorthand": ["Strength", "strength", "STR"]},
+    {"shorthand": "CON", "longhand": "Constitution", "gmshorthand": ["Constitution", "constitution", "CON"]},
+    {"shorthand": "INT", "longhand": "Intelligence", "gmshorthand": ["Intelligence", "intelligence", "INT"]},
+    {"shorthand": "CHA", "longhand": "Charisma", "gmshorthand": ["Charisma", "charisma", "CHA"]},
+    {"shorthand": "LL", "longhand": "Ley Line", "gmshorthand": ["Ley Line", "ley line", "LL"]}
+  ]
+}
