@@ -4,32 +4,64 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Randomly Roll some ideas</title>
+    <title>⚔️ Arcmage Card Generator | TTRPG Toolkit</title>
     <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
-    <script src="cards.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="/site/site.css" />
 </head>
-<body>
-<div class="grid-container">
-    <div class="callout">
-        Using card properties from <a href="https://aminduna.arcmage.org/#/cards">Arcmage</a> in order to spark ideas.
-    </div>
-    <div class="callout">Arcmage is an open source card game. Here, I'm using the properties from their cards and randomly
-        pulling
-        from
-        each card type. </div>
-    <div class="callout primary">
-    <script type="text/javascript">
-        writeRandomCardFromEachType();
-    </script>
-    </div>
-</div>
-<script src="/node_modules/jquery/dist/jquery.js"></script>
-<script src="/node_modules/what-input/dist/what-input.js"></script>
-<script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
-<script>
-    $(document).foundation();
-</script>
+<body style="background-image: url('/site/images/brown-papyrus-paper_53876-14519.jpg');">
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1 class="tool-title">⚔️ Arcmage Card Generator</h1>
+            <p class="tool-subtitle">Generate random card combinations from Arcmage properties for character inspiration</p>
+        </div>
 
+        <div class="content-area">
+            <p><strong>Need inspiration for characters, items, or magical concepts?</strong> This generator uses 
+            card properties from <a href="https://aminduna.arcmage.org/#/cards" target="_blank" rel="noopener">Arcmage</a>, 
+            an open source card game, to spark creative ideas for your TTRPG sessions.</p>
+            
+            <p>Perfect for creating:</p>
+            <ul>
+                <li>Unique character concepts and backstories</li>
+                <li>Magical items with interesting properties</li>
+                <li>NPCs with distinct characteristics</li>
+                <li>Plot hooks and story elements</li>
+                <li>Environmental details and atmosphere</li>
+            </ul>
+        </div>
+
+        <div class="text-center" style="margin: 2rem 0;">
+            <button onclick="generateCards()" class="btn-primary">
+                🎴 Generate Card Inspiration
+            </button>
+        </div>
+
+        <div class="result-area">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Card Properties:</h3>
+            <div id="arcmage-result">
+                <p class="text-muted">Click the button above to generate random card properties!</p>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <h4>🎨 Using Card Properties:</h4>
+            <ul>
+                <li><strong>Mix and match:</strong> Combine different card properties to create unique concepts</li>
+                <li><strong>Literal interpretation:</strong> Use properties directly as character traits or abilities</li>
+                <li><strong>Metaphorical inspiration:</strong> Let properties suggest personality traits or motivations</li>
+                <li><strong>Environmental cues:</strong> Use card themes to inspire settings and atmospheres</li>
+                <li><strong>Story elements:</strong> Transform properties into plot hooks or complications</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/what-input/dist/what-input.js"></script>
+    <script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="cards.js" type="text/javascript"></script>
+    <script>
+        $(document).foundation();
+    </script>
 </body>
 </html>

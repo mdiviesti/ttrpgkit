@@ -4,26 +4,67 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Plot Twist</title>
+    <title>Plot Twist Generator - TTRPG Toolkit</title>
     <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
     <script src="plot.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="/site/site.css" />
 </head>
 <body>
-<div class="grid-container">
-    <div class="callout"> Random Plot generation</div><br>
-    <div class="callout primary">
-        <script type="text/javascript">
-            writeRandomPlot();
-        </script>
-    </div>
-</div>
-<script src="/node_modules/jquery/dist/jquery.js"></script>
-<script src="/node_modules/what-input/dist/what-input.js"></script>
-<script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
-<script>
-    $(document).foundation();
-</script>
+    <a href="/" class="nav-home">🏠 Home</a>
+    
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1 class="tool-title">🌀 Plot Twist Generator</h1>
+            <p class="tool-subtitle">Surprise your players with unexpected story turns</p>
+        </div>
 
+        <div class="content-area">
+            <p><strong>The power of a good plot twist</strong> can transform an ordinary session into an unforgettable experience. 
+            Plot twists create dramatic tension, challenge player assumptions, and keep everyone on the edge of their seats.</p>
+            
+            <p>Use these twists to:</p>
+            <ul>
+                <li>Shake up predictable storylines</li>
+                <li>Create "aha!" moments for your players</li>
+                <li>Add depth to NPCs and relationships</li>
+                <li>Turn allies into enemies (or vice versa)</li>
+                <li>Reveal hidden connections between story elements</li>
+            </ul>
+        </div>
+
+        <div class="text-center" style="margin: 2rem 0;">
+            <button onclick="location.reload()" class="btn-primary">
+                🎲 Generate New Plot Twist
+            </button>
+        </div>
+
+        <div class="result-area">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Your Plot Twist:</h3>
+            <div id="twist-result" style="font-size: 1.3rem; font-weight: bold;">
+                <script type="text/javascript">
+                    writeRandomPlot();
+                </script>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <h4>🎯 Making Twists Work:</h4>
+            <ul>
+                <li><strong>Plant seeds early:</strong> The best twists are retroactively obvious</li>
+                <li><strong>Stay true to character:</strong> Twists should feel surprising but not out of character</li>
+                <li><strong>Don't overdo it:</strong> Too many twists can make your story feel chaotic</li>
+                <li><strong>Give players agency:</strong> Let them piece together clues and discover twists naturally</li>
+                <li><strong>Prepare for consequences:</strong> Every twist should have meaningful story implications</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/what-input/dist/what-input.js"></script>
+    <script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
 </body>
 </html>

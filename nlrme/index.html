@@ -7,29 +7,68 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table Top RPG Kit</title>
+    <title>Chaos Generator - TTRPG Toolkit</title>
     <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css" />
     <script src="chaos.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/site/site.css" />
+    <script src="/site/nav.js"></script>
 </head>
-<body>
-<div class="grid-container">
-    <h1>Table Top RPG Kit!</h1>
-    <div class="callout secondary">
-        A chaotic thing happens.
-    </div>
-    <div class="callout primary">
-        <script type="text/javascript">
-            writeRandom();
-        </script>
-    </div>
-</div>
-<script src="/node_modules/jquery/dist/jquery.js"></script>
-<script src="/node_modules/what-input/dist/what-input.js"></script>
-<script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
-<script>
-    $(document).foundation();
-</script>
+<body style="background-image: url('/site/images/brown-papyrus-paper_53876-14519.jpg');">
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1 class="tool-title">💥 Chaos Generator</h1>
+            <p class="tool-subtitle">When you need something unexpected to happen - let chaos decide!</p>
+        </div>
 
+        <div class="content-area">
+            <p><strong>Sometimes the best moments in RPGs come from pure chaos.</strong> When your session needs a 
+            random event, an unexpected complication, or you just want to shake things up, this generator provides 
+            the perfect chaotic element.</p>
+            
+            <p>Use chaotic events for:</p>
+            <ul>
+                <li>Spicing up slow moments in your session</li>
+                <li>Creating unexpected complications</li>
+                <li>Introducing random encounters or events</li>
+                <li>When players go completely off-script</li>
+                <li>Adding unpredictability to your world</li>
+            </ul>
+        </div>
+
+        <div class="text-center" style="margin: 2rem 0;">
+            <button onclick="generateChaos()" class="btn-primary">
+                🎲 Generate Chaos
+            </button>
+        </div>
+
+        <div class="result-area">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">A Chaotic Thing Happens:</h3>
+            <div id="chaos-result" style="font-size: 1.3rem; font-weight: bold; line-height: 1.8;">
+                <p class="text-muted">Click the button above to generate chaos events!</p>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <h4>🌪️ Embracing the Chaos:</h4>
+            <ul>
+                <li><strong>Roll with it:</strong> Let the chaos event shape the direction of your story</li>
+                <li><strong>Connect the dots:</strong> Tie chaotic events to ongoing plot threads when possible</li>
+                <li><strong>Player agency:</strong> Let players decide how their characters react to chaos</li>
+                <li><strong>Consequences matter:</strong> Even random events should have meaningful outcomes</li>
+                <li><strong>Timing is everything:</strong> Use chaos to punctuate dramatic moments</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/what-input/dist/what-input.js"></script>
+    <script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+        
+        function generateNewChaos() {
+            writeRandom();
+        }
+    </script>
 </body>
 </html>

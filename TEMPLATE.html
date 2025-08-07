@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tool Name - TTRPG Toolkit</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <!-- Include your tool's JavaScript here -->
+    <!-- <script src="your-tool.js" type="text/javascript"></script> -->
+    <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="/site/site.css" />
+</head>
+<body>
+    <!-- Navigation back to home -->
+    <a href="/" class="nav-home">🏠 Home</a>
+    
+    <div class="tool-container">
+        <!-- Tool Header -->
+        <div class="tool-header">
+            <h1 class="tool-title">🎲 Tool Name</h1>
+            <p class="tool-subtitle">Brief description of what this tool does</p>
+        </div>
+
+        <!-- Information/Instructions Section -->
+        <div class="content-area">
+            <p><strong>Tool description:</strong> Explain what your tool does and how it helps Game Masters.</p>
+            
+            <p>Key features:</p>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="text-center" style="margin: 2rem 0;">
+            <button onclick="generateContent()" class="btn-primary">
+                🎲 Generate New Content
+            </button>
+            <button onclick="clearResults()" class="btn-secondary">
+                🗑️ Clear
+            </button>
+        </div>
+
+        <!-- Results Display Area -->
+        <div class="result-area" id="results" style="display: none;">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Your Result:</h3>
+            <div id="result-content">
+                <!-- Generated content will appear here -->
+            </div>
+        </div>
+
+        <!-- Additional Information/Tips -->
+        <div class="content-area">
+            <h4>💡 Usage Tips:</h4>
+            <ul>
+                <li>Tip 1 for using this tool effectively</li>
+                <li>Tip 2 for Game Masters</li>
+                <li>Tip 3 for creative inspiration</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Required Foundation Scripts -->
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/what-input/dist/what-input.js"></script>
+    <script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+        
+        // Example JavaScript functions for your tool
+        function generateContent() {
+            // Your generation logic here
+            const resultDiv = document.getElementById('result-content');
+            const resultsSection = document.getElementById('results');
+            
+            // Example: Generate random content
+            const exampleResults = [
+                "A mysterious stranger arrives with urgent news",
+                "The weather suddenly changes, affecting the journey", 
+                "An old ally appears, but something seems different",
+                "A hidden passage is discovered in an unexpected place"
+            ];
+            
+            const randomResult = exampleResults[Math.floor(Math.random() * exampleResults.length)];
+            resultDiv.innerHTML = randomResult;
+            resultsSection.style.display = 'block';
+        }
+        
+        function clearResults() {
+            const resultsSection = document.getElementById('results');
+            resultsSection.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

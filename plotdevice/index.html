@@ -1,29 +1,74 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!doctype    <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="/site/site.css" />
+    <script src="/site/nav.js"></script>
+</head>
+<body style="background-image: url('/site/images/brown-papyrus-paper_53876-14519.jpg');">
+    <div class="tool-container"><html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Plot Device</title>
+    <title>Plot Device Generator - TTRPG Toolkit</title>
     <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
     <script src="plot.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="/site/site.css" />
 </head>
 <body>
-<div class="grid-container">
-    <div class="callout"> Random Plot generation</div><br>
-    <div class="callout primary">
-        <script type="text/javascript">
-            writeRandomPlot();
-        </script>
-    </div>
-</div>
-<script src="/node_modules/jquery/dist/jquery.js"></script>
-<script src="/node_modules/what-input/dist/what-input.js"></script>
-<script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
-<script>
-    $(document).foundation();
-</script>
+    <a href="/" class="nav-home">🏠 Home</a>
+    
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1 class="tool-title">🎭 Plot Device Generator</h1>
+            <p class="tool-subtitle">Create engaging narrative moments to drive your story forward</p>
+        </div>
 
+        <div class="content-area">
+            <p><strong>What are plot devices?</strong> Plot devices are narrative techniques or story elements that help 
+            move your plot forward, create tension, or provide solutions to story problems. They're the building blocks 
+            that keep your audience engaged and your story moving.</p>
+            
+            <p>Perfect for Game Masters who need inspiration for:</p>
+            <ul>
+                <li>Moving a stalled story forward</li>
+                <li>Creating dramatic moments</li>
+                <li>Introducing new story elements</li>
+                <li>Connecting different plot threads</li>
+            </ul>
+        </div>
+
+        <div class="text-center" style="margin: 2rem 0;">
+            <button onclick="location.reload()" class="btn-primary">
+                🎲 Generate New Plot Device
+            </button>
+        </div>
+
+        <div class="result-area">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Your Plot Device:</h3>
+            <div id="plot-result" style="font-size: 1.3rem; font-weight: bold;">
+                <script type="text/javascript">
+                    writeRandomPlot();
+                </script>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <h4>💡 Tips for Using Plot Devices:</h4>
+            <ul>
+                <li><strong>Timing is key:</strong> Introduce plot devices when the story needs momentum</li>
+                <li><strong>Make it personal:</strong> Connect the device to your characters' backgrounds or goals</li>
+                <li><strong>Foreshadow when possible:</strong> The best plot devices feel inevitable in hindsight</li>
+                <li><strong>Don't overuse:</strong> Plot devices work best when they feel organic, not forced</li>
+                <li><strong>Build upon them:</strong> Let the consequences of one device create opportunities for others</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/what-input/dist/what-input.js"></script>
+    <script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
 </body>
 </html>

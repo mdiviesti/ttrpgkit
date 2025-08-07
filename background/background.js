@@ -35,8 +35,16 @@ var background = {
 };
 
 function getRandomFamily(){
-  document.write("<p><b>Family:</b> " + background.family[Math.floor(Math.random() * background.family.length)] + "</p>" )
-  return background.family[Math.floor(Math.random() * background.family.length)];
+  const resultElement = document.getElementById('background-result');
+  if (resultElement) {
+    const randomBackground = background.family[Math.floor(Math.random() * background.family.length)];
+    resultElement.innerHTML = "<p><b>Family Background:</b> " + randomBackground + "</p>";
+    return randomBackground;
+  } else {
+    // Fallback for older template
+    document.write("<p><b>Family:</b> " + background.family[Math.floor(Math.random() * background.family.length)] + "</p>" );
+    return background.family[Math.floor(Math.random() * background.family.length)];
+  }
 }
 var cardTypes = ["City", "Creature", "Enchantment", "Event", "Magic"];
 

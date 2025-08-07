@@ -8068,9 +8068,18 @@ var chaos = ["1d10 of caster's fingers turn to stone",
     "While in this area, no one can speak of anything outside the area",
     "While in this area, no one can speak to anyone else in the area", "The Stars Are Right!"];
 
-function writeRandom() {
+function generateChaos() {
+    const resultDiv = document.getElementById('chaos-result');
+    let html = '';
+    
     for (var i = 0; i < 10; i++) {
         var effect = chaos[Math.floor(Math.random() * chaos.length)];
-        document.write("<div class='card'><div class='card-section'> <p>" + effect + "</p></div></div>");
+        html += "<div class='card'><div class='card-section'><p>" + effect + "</p></div></div>";
     }
+    
+    resultDiv.innerHTML = html;
+}
+
+function writeRandom() {
+    generateChaos();
 }

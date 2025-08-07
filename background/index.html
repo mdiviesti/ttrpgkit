@@ -1,35 +1,77 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!doctype    <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="/site/site.css" />
+    <script src="/site/nav.js"></script>
+</head>
+<body style="background-image: url('/site/images/brown-papyrus-paper_53876-14519.jpg');">
+    <div class="tool-container"><html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Randomly Roll some ideas</title>
+    <title>Character Background Generator - TTRPG Toolkit</title>
     <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
     <script src="background.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="/site/site.css" />
 </head>
 <body>
-<div class="grid-container">
-    <div class="callout">
-        Using card properties from <a href="https://aminduna.arcmage.org/#/cards">Arcmage</a> in order to spark ideas.
-    </div>
-    <div class="callout">Arcmage is an open source card game. Here, I'm using the properties from their cards and randomly
-        pulling
-        from
-        each card type. </div>
-    <div class="callout primary">
-    <script type="text/javascript">
-        getRandomFamily();
-    </script>
-    </div>
-</div>
-<script src="/node_modules/jquery/dist/jquery.js"></script>
-<script src="/node_modules/what-input/dist/what-input.js"></script>
-<script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
-<script>
-    $(document).foundation();
-</script>
+    <a href="/" class="nav-home">🏠 Home</a>
+    
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1 class="tool-title">👤 Character Background Generator</h1>
+            <p class="tool-subtitle">Create rich backstories and backgrounds for NPCs and player characters</p>
+        </div>
 
+        <div class="content-area">
+            <p><strong>Generate unique character backgrounds</strong> using card properties from the open source 
+            <a href="https://aminduna.arcmage.org/#/cards" target="_blank">Arcmage</a> card game. This tool randomly 
+            combines different family traits and characteristics to create interesting character concepts.</p>
+            
+            <p>Perfect for:</p>
+            <ul>
+                <li>Creating memorable NPCs with depth</li>
+                <li>Inspiring player character backstories</li>
+                <li>Adding variety to your cast of characters</li>
+                <li>Breaking out of typical character archetypes</li>
+            </ul>
+        </div>
+
+        <div class="text-center" style="margin: 2rem 0;">
+            <button onclick="generateNewBackground()" class="btn-primary">
+                🎲 Generate New Background
+            </button>
+        </div>
+
+        <div class="result-area">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Character Background:</h3>
+            <div id="background-result" style="font-size: 1.2rem; line-height: 1.8;">
+                <script type="text/javascript">
+                    getRandomFamily();
+                </script>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <h4>💡 Using Your Generated Background:</h4>
+            <ul>
+                <li><strong>Expand the concept:</strong> Use the generated traits as a starting point for deeper development</li>
+                <li><strong>Add personal touches:</strong> Incorporate the background into your world's lore and history</li>
+                <li><strong>Create connections:</strong> Link characters with similar backgrounds or opposing traits</li>
+                <li><strong>Build relationships:</strong> Use backgrounds to establish existing relationships between characters</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/what-input/dist/what-input.js"></script>
+    <script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+        
+        function generateNewBackground() {
+            getRandomFamily();
+        }
+    </script>
 </body>
 </html>

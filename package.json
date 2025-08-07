@@ -1,15 +1,19 @@
 {
   "name": "ttrpgkit",
-  "version": "1.0.0",
-  "description": "A toolkit for Game Masters.",
+  "version": "2.0.0",
+  "description": "A comprehensive toolkit for Game Masters and world builders with creative generators, plot tools, and reference materials for tabletop RPGs.",
   "main": "index.html",
   "dependencies": {
     "foundation-sites": "^6.5.3",
     "jquery": "^3.4.1",
     "what-input": "^5.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
   "scripts": {
+    "start": "http-server -p 8080 -o",
+    "serve": "http-server -p 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,14 +21,20 @@
     "url": "git+https://github.com/mdiviesti/ttrpgkit.git"
   },
   "keywords": [
-    "Role",
-    "Playing",
-    "Game",
-    "Fanstasy",
     "RPG",
     "TTRPG",
-    "Table",
-    "Top"
+    "tabletop",
+    "game-master",
+    "world-building",
+    "fantasy",
+    "generators",
+    "creative-tools",
+    "storytelling",
+    "campaign-tools",
+    "plot-generators",
+    "character-tools",
+    "dm-tools",
+    "gm-resources"
   ],
   "author": "Michael Diviesti",
   "license": "MIT",

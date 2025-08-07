@@ -4,30 +4,69 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Randomly Roll some ideas</title>
+    <title>Random Sentence Generator - TTRPG Toolkit</title>
     <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
     <script src="sentence.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css" />
     <link rel="stylesheet" href="/site/site.css" />
+    <script src="/site/nav.js"></script>
 </head>
-<body>
-<div class="grid-container">
-    <div class="callout">
-        Weird random sentence generator for no reason.
-    </div>
-    <div class="callout" id="sentence"></div>
-    <div class="callout primary">
-    <script type="text/javascript">
-        sentence();
-    </script>
-    </div>
-</div>
-<script src="/node_modules/jquery/dist/jquery.js"></script>
-<script src="/node_modules/what-input/dist/what-input.js"></script>
-<script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
-<script>
-    $(document).foundation();
-</script>
+<body style="background-image: url('/site/images/brown-papyrus-paper_53876-14519.jpg');">
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1 class="tool-title">📝 Random Sentence Generator</h1>
+            <p class="tool-subtitle">Generate unexpected sentences for dialogue, descriptions, and inspiration</p>
+        </div>
 
+        <div class="content-area">
+            <p><strong>Sometimes you need something completely random</strong> to spark your creativity. This generator 
+            creates unexpected sentences that can serve as:</p>
+            
+            <ul>
+                <li><strong>NPC dialogue:</strong> Give your characters unique or quirky things to say</li>
+                <li><strong>Overheard conversations:</strong> Background chatter in taverns or marketplaces</li>
+                <li><strong>Writing prompts:</strong> Use the sentence as a starting point for a story or scene</li>
+                <li><strong>Random descriptions:</strong> Unusual details to add flavor to your world</li>
+                <li><strong>Prophetic utterances:</strong> Mysterious words from oracles or fortune tellers</li>
+            </ul>
+        </div>
+
+        <div class="text-center" style="margin: 2rem 0;">
+            <button onclick="generateNewSentence()" class="btn-primary">
+                🎲 Generate New Sentence
+            </button>
+        </div>
+
+        <div class="result-area">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Your Random Sentence:</h3>
+            <div id="sentence" style="font-size: 1.3rem; font-style: italic; line-height: 1.8;">
+                <script type="text/javascript">
+                    sentence();
+                </script>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <h4>🎭 Creative Applications:</h4>
+            <ul>
+                <li><strong>Session starters:</strong> Begin your session with a random sentence as context</li>
+                <li><strong>Improv challenges:</strong> Have players work the sentence into their roleplay</li>
+                <li><strong>World building:</strong> Use sentences to inspire local customs or sayings</li>
+                <li><strong>Plot hooks:</strong> Transform random sentences into adventure seeds</li>
+                <li><strong>Character development:</strong> Use as character catchphrases or backstory elements</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/what-input/dist/what-input.js"></script>
+    <script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+        
+        function generateNewSentence() {
+            sentence(); // Call the existing function
+        }
+    </script>
 </body>
 </html>

@@ -6947,3 +6947,22 @@ function writeRandomCardFromEachType(){
     document.write("<p><b>" + randCard.type.name + ":</b> " + randCard.name + "</p>" )
   }
 }
+
+function generateCards(){
+  const resultDiv = document.getElementById('arcmage-result');
+  let html = '';
+  
+  for(var i = 0; i < cardTypes.length; i++){
+    var foundCard = findAllCardsByType(cardTypes[i]);
+    var randCard = foundCard[Math.floor(Math.random() * foundCard.length)];
+    html += "<div class='card'><div class='card-section'>";
+    html += "<h4 style='color: var(--primary-color); margin-bottom: 0.5rem;'>" + randCard.type.name + "</h4>";
+    html += "<p style='font-size: 1.1rem; font-weight: bold;'>" + randCard.name + "</p>";
+    if(randCard.ruleText) {
+      html += "<p style='font-style: italic; color: #666;'>" + randCard.ruleText + "</p>";
+    }
+    html += "</div></div>";
+  }
+  
+  resultDiv.innerHTML = html;
+}

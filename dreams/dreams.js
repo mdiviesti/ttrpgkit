@@ -879,3 +879,18 @@ function writeRandomDreams() {
         document.write("<p><b>" + dream.name + ":</b> " + dream.meaning + "</p>");
     }
 }
+
+function generateDreams() {
+    const resultDiv = document.getElementById('dreams-result');
+    let html = '';
+    
+    for (var i = 0; i < 5; i++) {
+        var dream = dreams[Math.floor(Math.random() * dreams.length)];
+        html += "<div class='card'><div class='card-section'>";
+        html += "<h4 style='color: var(--primary-color); margin-bottom: 0.5rem;'>" + dream.name + "</h4>";
+        html += "<p style='font-style: italic; line-height: 1.6;'>" + dream.meaning + "</p>";
+        html += "</div></div>";
+    }
+    
+    resultDiv.innerHTML = html;
+}

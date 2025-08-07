@@ -4,31 +4,68 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table Top RPG Kit</title>
+    <title>🌙 Dream Generator | TTRPG Toolkit</title>
     <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css" />
-    <script src="dreams.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/site/site.css" />
 </head>
-<body>
-<div class="grid-container">
-    <h1>Table Top RPG Kit!</h1>
-    <div class="callout secondary">
-        Content is from a public domain book at project Gutenberg <a
-            href="https://www.gutenberg.org/files/54774/54774-h/54774-h.htm">FORTUNES AND
-        DREAMS</a> BY ASTRA CIELO
-    </div>
-    <div class="callout primary">
-        <script type="text/javascript">
-            writeRandomDreams();
-        </script>
-    </div>
-</div>
-<script src="/node_modules/jquery/dist/jquery.js"></script>
-<script src="/node_modules/what-input/dist/what-input.js"></script>
-<script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
-<script>
-    $(document).foundation();
-</script>
+<body style="background-image: url('/site/images/brown-papyrus-paper_53876-14519.jpg');">
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1 class="tool-title">🌙 Dream Generator</h1>
+            <p class="tool-subtitle">Generate mysterious dreams and visions for your characters</p>
+        </div>
 
+        <div class="content-area">
+            <p><strong>Dreams and visions add depth and mystery to any campaign.</strong> Whether your character is 
+            sleeping naturally, experiencing magical visions, or receiving divine messages, dreams can provide 
+            inspiration, warnings, or cryptic guidance.</p>
+            
+            <p>Perfect for:</p>
+            <ul>
+                <li>Character backstory elements and memories</li>
+                <li>Prophetic visions and foreshadowing</li>
+                <li>Divine or magical communication</li>
+                <li>Psychological horror and tension</li>
+                <li>Plot hooks disguised as symbolism</li>
+            </ul>
+            
+            <div class="callout secondary">
+                <p><em>Content sourced from the public domain book "Fortunes and Dreams" by Astra Cielo, 
+                available at <a href="https://www.gutenberg.org/files/54774/54774-h/54774-h.htm" target="_blank" rel="noopener">Project Gutenberg</a>.</em></p>
+            </div>
+        </div>
+
+        <div class="text-center" style="margin: 2rem 0;">
+            <button onclick="generateDreams()" class="btn-primary">
+                ✨ Generate Dreams
+            </button>
+        </div>
+
+        <div class="result-area">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Dream Visions:</h3>
+            <div id="dreams-result">
+                <p class="text-muted">Click the button above to generate mysterious dreams!</p>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <h4>🔮 Interpreting Dreams:</h4>
+            <ul>
+                <li><strong>Symbolic meaning:</strong> Look for metaphors and hidden meanings in dream imagery</li>
+                <li><strong>Emotional resonance:</strong> Focus on how dreams make characters feel</li>
+                <li><strong>Recurring themes:</strong> Use similar dream elements across multiple sessions</li>
+                <li><strong>Interactive visions:</strong> Let players help interpret their character's dreams</li>
+                <li><strong>Plot integration:</strong> Weave dream symbols into real-world events</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/what-input/dist/what-input.js"></script>
+    <script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="dreams.js" type="text/javascript"></script>
+    <script>
+        $(document).foundation();
+    </script>
 </body>
 </html>

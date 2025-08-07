@@ -4,55 +4,415 @@
     <meta charset="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Table Top RPG Kit</title>
+    <title>TTRPG Toolkit - G        <div class="menu-sect                                            <a href="/background/index.html" class="menu-item">
+                <span class="menu-icon">👤</span>Character Background
+            </a>href="/plottwist/index.html" class="menu-item">
+                <span class="menu-icon">🌀</span>Plot Twist Generator
+            </a> <a href="/ideaprompt/index.html" class="menu-item">
+                <span class="menu-icon">💡</span>Idea Prompts
+            </a>href="https://azgaar.github.io/Fantasy-Map-Generator/" class="menu-item" target="_blank">
+                <span class="menu-icon">🌍</span>Fantasy Map Generator
+            </a>">
+            <div class="menu-section-title">📚 Reference</div>
+            <a href="/d0rfs/index.html" class="menu-item">
+                <span class="menu-icon">📋</span>Session Notes
+            </a>
+            <a href="/5etools-2024/" class="menu-item" target="_blank">
+                <span class="menu-icon">⚔️</span>5eTools (Current)
+            </a>
+            <a href="/5etools-2014/" class="menu-item" target="_blank">
+                <span class="menu-icon">📜</span>5eTools (Legacy)
+            </a>
+        </div>senal</title>
     <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.css"/>
     <link rel="stylesheet" href="/site/site.css"/>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2B48C;
+            --accent-color: #CD853F;
+            --text-dark: #2C1810;
+            --text-light: #F5F5DC;
+            --card-bg: rgba(245, 245, 220, 0.95);
+            --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.9), rgba(205, 133, 63, 0.8));
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .tool-category {
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            border: 2px solid var(--secondary-color);
+            text-decoration: none;
+            color: var(--text-dark);
+            display: block;
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+            border-color: var(--accent-color);
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .tool-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .tool-description {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+
+        .external-link {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: var(--text-light);
+        }
+
+        .external-link:hover {
+            color: var(--text-light);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            background: rgba(139, 69, 19, 0.1);
+            border-radius: 8px;
+            color: var(--text-dark);
+        }
+
+        /* Quick Access Menu */
+        .quick-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .menu-toggle {
+            background: var(--primary-color);
+            color: var(--text-light);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .menu-dropdown {
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background: var(--card-bg);
+            border: 2px solid var(--secondary-color);
+            border-radius: 12px;
+            box-shadow: var(--hover-shadow);
+            min-width: 280px;
+            max-height: 70vh;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .menu-dropdown.show {
+            display: block;
+        }
+
+        .menu-section {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--secondary-color);
+        }
+
+        .menu-section:last-child {
+            border-bottom: none;
+        }
+
+        .menu-section-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .menu-item {
+            display: block;
+            padding: 0.7rem 1rem 0.7rem 2rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background 0.2s ease;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background: rgba(139, 69, 19, 0.1);
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .menu-item .menu-icon {
+            margin-right: 8px;
+            width: 20px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .tool-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .quick-menu {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+            .menu-dropdown {
+                position: relative;
+                top: 10px;
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+    <!-- Only load global nav on non-index pages -->
+    <!-- <script src="/site/nav.js"></script> -->
 </head>
 <body>
-<div class="grid-container">
-    <h1>Table Top RPG Kit!</h1>
-    <p>
-        Largely, this is a me thing. Just a few various tools that are either open source from others or small tools
-        I've
-        written in order to help me stay creative or to give me some sort of help/inspiration when I'm stuck on a
-        campaign or writing idea. Whether or not I decide to beautify or streamline this in anyway is yet to be
-        determined. For now, it is what it is.
-        This website is a curration of variouse opensource tools to help you build your world. Geared, largely, toward
-        Game
-        Masters (GMs) but these tools are also great if you're working
-        on building worlds for your literary works, movies, tv shows or for any other purpose.
-    </p>
-    <p>
-        Map Generator <a href="https://azgaar.github.io/Fantasy-Map-Generator/">Azgaar Fantasy Map Generator</a>
-    </p>
-    <p>
-        Idea Prompts <a href="/ideaprompt/index.html"> Idea Prompts</a>
-    </p>
-    <p>
-        Idea Prompts <a href="/arcmage/index.html"> Random Arcmage stuff</a>
-    </p>
-    <p>
-        Random entry from the Dream Dictionary <a href="/dreams/index.html"> Dreams</a>
-    </p>
-    <p>
-        A chaotic thing happened <a href="/nlrme/index.html">chaos</a>
-    </p>
-    <p>
-        Randomly generate a <a href="/plotdevice/index.html">Plot Device</a>
-    </p>
-    <p>
-        Randomly generate a <a href="/plottwist/index.html">Plot Twist</a>
-    </p>
-    <p> Random <a href="/background/index.html">Background</a> </p>
-    <p> Random <a href="/sentence/index.html">sentence</a></p>
-    <p>Weird Map Gen thing and a bunch of words/names generator <a href="random/index.html">link</a></p>
+<!-- Global Navigation -->
+<script src="/site/nav.js"></script>
 
+<div class="grid-container">
+    <div class="hero-section">
+        <h1 class="hero-title">🎲 TTRPG Toolkit</h1>
+        <p class="hero-subtitle">Your Complete Game Master's Arsenal</p>
+        <p style="max-width: 800px; margin: 0 auto; line-height: 1.6;">
+            A curated collection of creative tools to help Game Masters and world builders stay inspired. 
+            Whether you're running a campaign, writing a story, or building entire worlds, these tools 
+            will spark your creativity when you need it most.
+        </p>
+    </div>
+
+    <div class="tool-category">
+        <h2 class="category-title">🗺️ World Building & Maps</h2>
+        <div class="tool-grid">
+            <a href="https://azgaar.github.io/Fantasy-Map-Generator/" class="tool-card external-link" target="_blank">
+                <div class="tool-icon">🌍</div>
+                <div class="tool-title">Azgaar Fantasy Map Generator</div>
+                <div class="tool-description">Create detailed fantasy world maps with countries, cities, and cultures. Professional-grade map generation tool.</div>
+            </a>
+            <a href="/random/index.html" class="tool-card">
+                <div class="tool-icon">🏰</div>
+                <div class="tool-title">Name & Place Generators</div>
+                <div class="tool-description">Generate names for places, people, and locations. Includes biblical places, terrain features, and town names.</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="tool-category">
+        <h2 class="category-title">⚡ Story & Plot Tools</h2>
+        <div class="tool-grid">
+            <a href="/ideaprompt/index.html" class="tool-card">
+                <div class="tool-icon">💡</div>
+                <div class="tool-title">Idea Prompts</div>
+                <div class="tool-description">Get creative writing prompts and story ideas to break through writer's block and inspire new adventures.</div>
+            </a>
+            <a href="/plotdevice/index.html" class="tool-card">
+                <div class="tool-icon">🎭</div>
+                <div class="tool-title">Plot Device Generator</div>
+                <div class="tool-description">Generate interesting plot devices to move your story forward and create engaging narrative moments.</div>
+            </a>
+            <a href="/plottwist/index.html" class="tool-card">
+                <div class="tool-icon">🌀</div>
+                <div class="tool-title">Plot Twist Generator</div>
+                <div class="tool-description">Add unexpected turns to your story with randomly generated plot twists that will surprise your players.</div>
+            </a>
+            <a href="/sentence/index.html" class="tool-card">
+                <div class="tool-icon">📝</div>
+                <div class="tool-title">Random Sentence Generator</div>
+                <div class="tool-description">Generate random sentences for inspiration, dialogue, or quick story starters.</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="tool-category">
+        <h2 class="category-title">🎲 Character & Chaos</h2>
+        <div class="tool-grid">
+            <a href="/background/index.html" class="tool-card">
+                <div class="tool-icon">👤</div>
+                <div class="tool-title">Character Background</div>
+                <div class="tool-description">Generate rich backstories and backgrounds for NPCs and player characters.</div>
+            </a>
+            <a href="/nlrme/index.html" class="tool-card">
+                <div class="tool-icon">💥</div>
+                <div class="tool-title">Chaos Generator</div>
+                <div class="tool-description">When you need something unexpected to happen - let chaos decide what random event occurs!</div>
+            </a>
+            <a href="/arcmage/index.html" class="tool-card">
+                <div class="tool-icon">🃏</div>
+                <div class="tool-title">Arcmage Tools</div>
+                <div class="tool-description">Random magic-related generators and tools for spellcasters and magical elements in your game.</div>
+            </a>
+            <a href="/dreams/index.html" class="tool-card">
+                <div class="tool-icon">🌙</div>
+                <div class="tool-title">Dream Generator</div>
+                <div class="tool-description">Explore dream symbolism and meanings for mysterious dream sequences and prophetic visions.</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="tool-category">
+        <h2 class="category-title">📚 Reference & Research</h2>
+        <div class="tool-grid">
+            <a href="/d0rfs/index.html" class="tool-card">
+                <div class="tool-icon">📋</div>
+                <div class="tool-title">Session Notes</div>
+                <div class="tool-description">Organized system for tracking campaign notes, character development, and session summaries.</div>
+            </a>
+            <a href="/5etools-2024/" class="tool-card" target="_blank">
+                <div class="tool-icon">⚔️</div>
+                <div class="tool-title">5eTools (Current)</div>
+                <div class="tool-description">Complete D&D 5e reference with spells, monsters, items, and rules - current version with latest content.</div>
+            </a>
+            <a href="/5etools-2014/" class="tool-card" target="_blank">
+                <div class="tool-icon">📜</div>
+                <div class="tool-title">5eTools (Legacy)</div>
+                <div class="tool-description">Original 5eTools version with classic D&D 5e content and interface from 2014.</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="tool-category">
+        <h2 class="category-title">🔧 Utility Tools</h2>
+        <div class="tool-grid">
+            <a href="/stl_viewer/index.html" class="tool-card">
+                <div class="tool-icon">🏗️</div>
+                <div class="tool-title">3D Model Viewer</div>
+                <div class="tool-description">View STL files and 3D models for miniatures, terrain, and props in your browser.</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>TTRPG Toolkit</strong> - Crafted for Game Masters by Game Masters</p>
+        <p>Open source tools and resources to enhance your tabletop gaming experience.</p>
+    </div>
 </div>
+
 <script src="/node_modules/jquery/dist/jquery.js"></script>
 <script src="/node_modules/what-input/dist/what-input.js"></script>
 <script src="/node_modules/foundation-sites/dist/js/foundation.js"></script>
 <script>
     $(document).foundation();
+    
+    // Quick Menu Toggle Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const menuDropdown = document.getElementById('menuDropdown');
+        
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            menuDropdown.classList.toggle('show');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!menuDropdown.contains(e.target) && e.target !== menuToggle) {
+                menuDropdown.classList.remove('show');
+            }
+        });
+        
+        // Close menu when pressing Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                menuDropdown.classList.remove('show');
+            }
+        });
+        
+        // Close menu when clicking a menu item
+        menuDropdown.addEventListener('click', function(e) {
+            if (e.target.classList.contains('menu-item')) {
+                menuDropdown.classList.remove('show');
+            }
+        });
+    });
 </script>
 
 </body>

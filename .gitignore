@@ -178,3 +178,7 @@ composer.lock
 config.local.js
 config.local.json
 settings.local.json
+
+# 5etools repositories (managed separately)
+5etools-2014/
+5etools-2024/
